@@ -31,15 +31,10 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="30" viewBox="0 0 12 20" fill="none">
               <path d="M4.54054 9.72973L12 2.27027L9.72973 0L0 9.72973L9.72973 19.4595L12 17.1892L4.54054 9.72973Z" fill="black"/>
             </svg>
-
           </div>
-
-
         </header>
-        
+
         <main>
-        
-          
           <div class="form-group">
             <label>종류</label>
             <div class="type">
@@ -48,7 +43,6 @@
             </div>
           </div>
           
-
           <div class="form-group">
             <label for="content">내역명</label>
           </br>
@@ -56,7 +50,7 @@
               <input class="input-content"
                 type="text"
                 id="content"
-                placeholder="  수입/지출 내역명을 입력해주세요"
+                placeholder="   수입/지출 내역명을 입력해주세요"
               />
             </div>
           </div>
@@ -69,30 +63,28 @@
               <input
                 type="number"
                 id="amount"
-                placeholder="수입/지출 금액을 입력해주세요"
+                placeholder=" 수입/지출 금액을 입력해주세요"
               />
               <span class="unit">원</span>
 
             </div>  
           </div>
-
-
+        
           <div class="form-group">
             <label>날짜</label>
-            <input type="date" id="date" max="2099-12-31" min="2024-12-31"> 
+              <input type='date' id='currentDate'/>
+            <script>
+              document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
+            </script>
           </div>
-
-          
-
-          
 
           <div class="form-group">
             <label for="category">거래 수단</label>
           </br>
             <select name="transaction-means">
-              <option>현금</option>
-              <option>신용카드</option>
-              <option>체크카드</option>
+              <option> 현금</option>
+              <option> 신용카드</option>
+              <option> 체크카드</option>
             </select>
           </div>
 
@@ -101,14 +93,14 @@
             <label for="category">카테고리</label>
           </br>
             <select name="category-select">
-              <option>식비</option>
-              <option>쇼핑</option>
-              <option>공과금</option>
-              <option>교통비</option>
-              <option>경조사</option>
+              <option> 식비</option>
+              <option> 쇼핑</option>
+              <option> 공과금</option>
+              <option> 교통비</option>
+              <option> 경조사</option>
             </select>
           </div>
-
+ 
           
         <div class="register-button">
           <div class="button-text">
@@ -120,23 +112,37 @@
 
         </form>
         </main>
-
-
-        <footer class="w-full bg-[#F3F5FF] flex flex-col items-center justify-center py-10 bottom-0">
-          <p class="text-[#6A6A6A] text-[14px] weight-500">우리 REAL 가계부</p>
-          <p class="text-[#6A6A6A] text-[12px] weight-400">&copy; 2025 우리 REAL 가계부. 모든 권리 보유.</p>
-      </footer>
-
-  
-    </footer> 
-
-
-      
-
-        
-
-
       </div>
     </div>
+
+
+       
+      </footer>
+      <div id="footer"></div>
+    </footer>
   </body>
 </html>
+
+<script>
+  fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+
+  // const nightMode = document.getElementById('nightMode');
+  // const dayMode = document.getElementById('dayMode');
+
+  // nightMode.addEventListener('click', () => {
+  //     document.body.classList.toggle('night-mode');
+  //     nightMode.classList.add('hidden');
+  //     dayMode.classList.remove('hidden');
+  // });
+
+  // dayMode.addEventListener('click', () => {
+  //     document.body.classList.toggle('night-mode');
+  //     dayMode.classList.add('hidden');
+  //     nightMode.classList.remove('hidden');
+  // });
+</script>
