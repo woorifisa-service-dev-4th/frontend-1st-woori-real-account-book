@@ -23,7 +23,7 @@
 <body>
 <div class="flex flex-col items-center pt-[50px]">
     <div class="min-w-[675px]">
-        <div class="flex flex-col items-center gap-12 w-full">
+        <div class="flex flex-col items-center gap-14 w-full">
             <div class="flex flex-row justify-between w-full items-end h-[78px]">
                 <div class="flex flex-row items-center gap-2">
                     <img src="images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
@@ -40,12 +40,34 @@
                 </div>
 
                 <div class="flex flex-row gap-2">
-                    <button class="rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]">
+                    <button class="hover:bg-[#506CFF] hover:text-white rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]"
+                            onclick="location.href='http://127.0.0.1:8080/public/category-analysis.html'">
                         분석 보기
                     </button>
-                    <button class="rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]">
+                    <button class="hover:bg-[#506CFF] hover:text-white rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]"
+                            onclick="location.href='http://127.0.0.1:8080/public/transaction-register.html'">
                         내역 등록
                     </button>
+                </div>
+            </div>
+
+            <div class="flex flex-row w-full justify-between">
+                <div class="hover:bg-[#d9dfff] flex flex-col justify-between rounded-[16px] bg-[#E6EAFF] p-5 w-[327px] h-[180px]">
+                    <p class="weight-600 text-[18px]">이번달 총 수입</p>
+
+                    <div class="flex flex-col">
+                        <p class="text-[#5E5E5E] text-[14px] weight-500">저번달보다 1,000,000원 늘었어요🥰</p>
+                        <p class="weight-600 text-[26px]">1,000,000원</p>
+                    </div>
+                </div>
+
+                <div class="hover:bg-[#3959ff] flex flex-col justify-between rounded-[16px] bg-[#506CFF] p-5 w-[327px] h-[180px]">
+                    <p class="weight-600 text-[18px] text-white">이번달 총 지출</p>
+
+                    <div class="flex flex-col">
+                        <p class="text-[#5E5E5E] text-[14px] text-[#DBDBDB] weight-500">수입보다 1,000,000원 더 썼어요😢</p>
+                        <p class="weight-600 text-[26px] text-white">2,000,000원</p>
+                    </div>
                 </div>
             </div>
 
@@ -95,5 +117,16 @@
         </div>
     </div>
 </div>
+
+<div id="footer"></div>
 </body>
 </html>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+</script>
