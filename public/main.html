@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="/public/images/favicon.png">
     <script>
         tailwind.config = {
             theme: {
@@ -21,10 +22,140 @@
     </script>
 </head>
 <body>
-<div class="flex flex-col items-center pt-[50px]">
-    <div>
+<div class="flex flex-col items-center pt-[50px] pb-[70px]">
+    <div class="min-w-[675px] min-h-content">
+        <div class="flex flex-col items-center gap-14 w-full">
+            <div class="flex flex-row justify-between w-full items-end h-[78px]">
+                <div class="flex flex-row items-center gap-2">
+                    <img src="images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
+                    <p class="weight-600">홍길동님</p>
+                </div>
 
+                <div class="absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center">
+                    <h1 class="dark-mode-light-gray text-[#3C3C3C] text-[16px] weight-600">우리 REAL 가계부</h1>
+                    <div class="flex flex-row items-center justify-center gap-2">
+                        <img src="images/vector-left-gray-icon.png" alt="left icon" class="w-[22px]" />
+                        <p class="weight-600 text-[36px]">2025.01</p>
+                        <img src="images/vector-right-gray-icon.png" alt="right icon" class="w-[22px]" />
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-end h-full justify-between">
+                    <img id="nightMode" src="images/night-mode-btn.png" alt="night mode" class="w-[30px] h-[30px]">
+                    <img id="dayMode" src="images/day-mode-btn.png" alt="day mode" class="w-[30px] h-[30px] hidden">
+                    <div class="flex flex-row gap-2">
+                        <button class="hover:bg-[#506CFF] hover:text-white rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]"
+                                onclick="location.href='category-analysis.html'">
+                            분석 보기
+                        </button>
+                        <button class="hover:bg-[#506CFF] hover:text-white rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]"
+                                onclick="location.href='transaction-register.html'">
+                            내역 등록
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-row w-full justify-between">
+                <div class="hover:bg-[#d9dfff] flex flex-col justify-between rounded-[16px] bg-[#E6EAFF] p-5 w-[327px] h-[180px]">
+                    <p class="black-text weight-600 text-[18px]">이번달 총 수입</p>
+
+                    <div class="flex flex-col">
+                        <p class="dark-gray-text text-[#5E5E5E] text-[14px] weight-500">저번달보다 1,000,000원 늘었어요🥰</p>
+                        <p class="black-text weight-600 text-[26px]">1,000,000원</p>
+                    </div>
+                </div>
+
+                <div class="hover:bg-[#3959ff] flex flex-col justify-between rounded-[16px] bg-[#506CFF] p-5 w-[327px] h-[180px]">
+                    <p class="weight-600 text-[18px] text-white">이번달 총 지출</p>
+
+                    <div class="flex flex-col">
+                        <p class="text-[#5E5E5E] text-[14px] text-[#DBDBDB] weight-500">수입보다 1,000,000원 더 썼어요😢</p>
+                        <p class="weight-600 text-[26px] text-white">2,000,000원</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5 items-start w-full">
+                <p class="weight-600 text-[18px]">저번달보다 <span class="text-[#D61F1F] text-[20px] weight-700">500,000원 더</span> 많이 썼어요</p>
+                <div class="flex flex-row gap-1 bg-[#F9F8F8] rounded-[16px] w-full pt-10 pb-7">
+                    <div class="flex flex-row justify-center gap-6 w-full items-end">
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="gray-text text-[#B6B6B6] text-[14px] weight-600">500,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[55px] rounded-[4px]"></div>
+                            <p class="black-text weight-500 text-[14px]">8월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="gray-text text-[#B6B6B6] text-[14px] weight-600">1,500,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[80px] rounded-[4px]"></div>
+                            <p class="black-text weight-500 text-[14px]">9월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="gray-text text-[#B6B6B6] text-[14px] weight-600">2,000,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[130px] rounded-[4px]"></div>
+                            <p class="black-text weight-500 text-[14px]">10월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="gray-text text-[#B6B6B6] text-[14px] weight-600">1,500,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[80px] rounded-[4px]"></div>
+                            <p class="black-text weight-500 text-[14px]">11월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="gray-text text-[#B6B6B6] text-[14px] weight-600">1,700,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[100px] rounded-[4px]"></div>
+                            <p class="black-text weight-500 text-[14px]">12월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="gray-text text-[#506CFF] text-[14px] weight-600">2,000,000</p>
+                            <div class="bg-[#506CFF] w-[35px] h-[130px] rounded-[4px]"></div>
+                            <p class="black-text weight-500 text-[14px]">이번 달</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="inputOutput"></div>
+        </div>
     </div>
 </div>
+
+<div id="footer"></div>
 </body>
 </html>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+
+    fetch('inputoutput.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('inputOutput').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading input-output:', error));
+
+    const nightMode = document.getElementById('nightMode');
+    const dayMode = document.getElementById('dayMode');
+
+    nightMode.addEventListener('click', () => {
+        document.body.classList.toggle('night-mode');
+        nightMode.classList.add('hidden');
+        dayMode.classList.remove('hidden');
+    });
+
+    dayMode.addEventListener('click', () => {
+        document.body.classList.toggle('night-mode');
+        dayMode.classList.add('hidden');
+        nightMode.classList.remove('hidden');
+    });
+</script>
