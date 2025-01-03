@@ -23,6 +23,91 @@
 <body>
 <div class="flex flex-col items-center pt-[50px]">
     <div>
+        <div class="flex flex-col items-center pt-[50px]">
+            <div class="min-w-[675px]">
+                <div class="flex flex-col items-center gap-12 w-full">
+                <div class="flex flex-row justify-between w-full items-end h-[78px]">
+                    <div class="flex flex-row items-center gap-2">
+                        <img src="images/move-button.png" alt="move button" class="w-[20px] h-[30px]">
+                        
+                    </div>
+    
+                    <div class="absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center">
+                        <h1 class="text-[#3C3C3C] text-[16px] weight-600">우리 REAL 가계부</h1>
+                        <div class="flex flex-row items-center justify-center gap-2">
+                            <h2 class="weight-600 text-[36px]">지출 분석</h2>
+                        </div>
+                    </div>
+    
+                    <div class="flex flex-row gap-2">
+                        <img src="images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
+                        <p class="weight-600">홍길동님</p>
+                    </div>
+                </div>
+                
+
+                <div class="flex mt-6 space-y-8 space-x-8 " style="width : 100%">
+                    <!-- Pie chart section -->
+                    <div class="relative flex flex-col">
+                        <h3 class="text-sm text-black">카테고리별 지출 내역</h3>
+                        <div class="relative w-[328px] h-[327px] flex-shrink-0 mt-4">
+                            <svg viewBox="0 0 32 32" class="absolute w-full h-full rounded-full">
+                                <!-- 전체 원 배경 -->
+                                <circle r="16" cx="16" cy="16" fill="white" />
+                                <!-- 식비 46.7% -->
+                                <circle r="16" cx="16" cy="16" fill="transparent" stroke="#2141E8" stroke-width="16" stroke-dasharray="47 48" transform="rotate(-90 16 16)" />
+                                <!-- 쇼핑 20% -->
+                                <circle r="16" cx="16" cy="16" fill="transparent" stroke="#2447FF" stroke-width="16" stroke-dasharray="20 84" transform="rotate(76.7 16 16)" />
+                                <!-- 공과금 13.3% -->
+                                <circle r="16" cx="16" cy="16" fill="transparent" stroke="#506CFF" stroke-width="16" stroke-dasharray="14 85" transform="rotate(152.7 16 16)" />
+                                <!-- 교통비 8.7% -->
+                                <circle r="16" cx="16" cy="16" fill="transparent" stroke="#6C84FF" stroke-width="16" stroke-dasharray="9 90" transform="rotate(196 16 16)" />
+                                <!-- 경조사 6.7% -->
+                                <circle r="16" cx="16" cy="16" fill="transparent" stroke="#9AAAFF" stroke-width="16" stroke-dasharray="7 90" transform="rotate(227.4 16 16)" />
+                            </svg>
+                            
+                        </div>
+                          
+                    </div>
+            
+
+
+                    <div class="ml-10 space-y-4 flex flex-col items-center justify-center">
+                        <div class="flex items-center space-x-4 w-full">
+                            <div class="flex justify-center items-center rounded-md" style="border-radius: 8px; background: #2141E8; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                <span class="text-white">1위 식비</span>
+                            </div>
+                            <span class="text-gray-700">350,000원</span>
+                        </div>
+                        <div class="flex items-center space-x-4 w-full">
+                            <div class="flex justify-center items-center rounded-md" style="border-radius: 8px; background: #2447FF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                <span class="text-white">2위 쇼핑</span>
+                            </div>
+                            <span class="text-gray-700">150,000원</span>
+                        </div>
+                        <div class="flex items-center space-x-4 w-full">
+                            <div class="flex justify-center items-center rounded-md" style="border-radius: 8px; background: #506CFF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                <span class="text-white">3위 공과금</span>
+                            </div>
+                            <span class="text-gray-700">100,000원</span>
+                        </div>
+                        <div class="flex items-center space-x-4 w-full">
+                            <div class="flex justify-center items-center rounded-md" style="border-radius: 8px; background: #6C84FF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                <span class="text-white">4위 교통비</span>
+                            </div>
+                            <span class="text-gray-700">65,000원</span>
+                        </div>
+                        <div class="flex items-center space-x-4 w-full">
+                            <div class="flex justify-center items-center rounded-md" style="border-radius: 8px; background: #9AAAFF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                <span class="text-white">5위 경조사</span>
+                            </div>
+                            <span class="text-gray-700">50,000원</span>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
 
     </div>
 </div>
