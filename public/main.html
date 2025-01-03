@@ -23,48 +23,75 @@
 <body>
 <div class="flex flex-col items-center pt-[50px]">
     <div class="min-w-[675px]">
-        <div class="flex flex-col gap-1.5 items-start">
-            <p class="weight-600 text-[18px]">저번달보다 <span class="text-[#D61F1F] text-[20px] weight-700">500,000원 더</span> 많이 썼어요</p>
-            <div class="flex flex-row gap-1 bg-[#F9F8F8] rounded-[16px] w-full pt-10 pb-7">
-                <div class="flex flex-row justify-center gap-6 w-full items-end">
-                    <div class="flex flex-col items-center gap-1">
-                        <p class="text-[#B6B6B6] text-[14px] weight-600">500,000</p>
-                        <div class="bg-[#B6B6B6] w-[35px] h-[55px] rounded-[4px]"></div>
-                        <p class="weight-500 text-[14px]">8월</p>
-                    </div>
+        <div class="flex flex-col items-center gap-12 w-full">
+            <div class="flex flex-row justify-between w-full items-end h-[78px]">
+                <div class="flex flex-row items-center gap-2">
+                    <img src="images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
+                    <p class="weight-600">홍길동님</p>
+                </div>
 
-                    <div class="flex flex-col items-center gap-1">
-                        <p class="text-[#B6B6B6] text-[14px] weight-600">1,500,000</p>
-                        <div class="bg-[#B6B6B6] w-[35px] h-[80px] rounded-[4px]"></div>
-                        <p class="weight-500 text-[14px]">9월</p>
+                <div class="absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center">
+                    <h1 class="text-[#3C3C3C] text-[16px] weight-600">우리 REAL 가계부</h1>
+                    <div class="flex flex-row items-center justify-center gap-2">
+                        <img src="images/vector-left-gray-icon.png" alt="left icon" class="w-[22px]" />
+                        <p class="weight-600 text-[36px]">2025.01</p>
+                        <img src="images/vector-right-gray-icon.png" alt="right icon" class="w-[22px]" />
                     </div>
+                </div>
 
-                    <div class="flex flex-col items-center gap-1">
-                        <p class="text-[#B6B6B6] text-[14px] weight-600">2,000,000</p>
-                        <div class="bg-[#B6B6B6] w-[35px] h-[130px] rounded-[4px]"></div>
-                        <p class="weight-500 text-[14px]">10월</p>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-1">
-                        <p class="text-[#B6B6B6] text-[14px] weight-600">1,500,000</p>
-                        <div class="bg-[#B6B6B6] w-[35px] h-[80px] rounded-[4px]"></div>
-                        <p class="weight-500 text-[14px]">11월</p>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-1">
-                        <p class="text-[#B6B6B6] text-[14px] weight-600">1,700,000</p>
-                        <div class="bg-[#B6B6B6] w-[35px] h-[100px] rounded-[4px]"></div>
-                        <p class="weight-500 text-[14px]">12월</p>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-1">
-                        <p class="text-[#506CFF] text-[14px] weight-600">2,000,000</p>
-                        <div class="bg-[#506CFF] w-[35px] h-[130px] rounded-[4px]"></div>
-                        <p class="weight-500 text-[14px]">이번 달</p>
-                    </div>
+                <div class="flex flex-row gap-2">
+                    <button class="rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]">
+                        분석 보기
+                    </button>
+                    <button class="rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]">
+                        내역 등록
+                    </button>
                 </div>
             </div>
 
+            <div class="flex flex-col gap-1.5 items-start w-full">
+                <p class="weight-600 text-[18px]">저번달보다 <span class="text-[#D61F1F] text-[20px] weight-700">500,000원 더</span> 많이 썼어요</p>
+                <div class="flex flex-row gap-1 bg-[#F9F8F8] rounded-[16px] w-full pt-10 pb-7">
+                    <div class="flex flex-row justify-center gap-6 w-full items-end">
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="text-[#B6B6B6] text-[14px] weight-600">500,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[55px] rounded-[4px]"></div>
+                            <p class="weight-500 text-[14px]">8월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="text-[#B6B6B6] text-[14px] weight-600">1,500,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[80px] rounded-[4px]"></div>
+                            <p class="weight-500 text-[14px]">9월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="text-[#B6B6B6] text-[14px] weight-600">2,000,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[130px] rounded-[4px]"></div>
+                            <p class="weight-500 text-[14px]">10월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="text-[#B6B6B6] text-[14px] weight-600">1,500,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[80px] rounded-[4px]"></div>
+                            <p class="weight-500 text-[14px]">11월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="text-[#B6B6B6] text-[14px] weight-600">1,700,000</p>
+                            <div class="bg-[#B6B6B6] w-[35px] h-[100px] rounded-[4px]"></div>
+                            <p class="weight-500 text-[14px]">12월</p>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1">
+                            <p class="text-[#506CFF] text-[14px] weight-600">2,000,000</p>
+                            <div class="bg-[#506CFF] w-[35px] h-[130px] rounded-[4px]"></div>
+                            <p class="weight-500 text-[14px]">이번 달</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
