@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리REAL가계부</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="flex flex-col items-center pt-[50px]">
+        <div class="min-w-[675px]">
+            <h1 class="text-xl ml-2"><strong>01월 내역</strong></h1>
+            <div class="flex justify-between mt-4">
+                <ul class="flex">   
+                    <li class="text-center bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-indigo-50 active:bg-violet-700 text-sm h-10 w-20 m-1 p-3 rounded-xl">
+                        <button type="button">전체</button>
+                    </li>
+                    <li class="text-center bg-[#EEEEEE] text-[#3D3D3D] hover:bg-[#506CFF] hover:text-indigo-50 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-sm h-10 w-20 m-1 p-3 rounded-xl">
+                        <button type="button">수입</button>
+                    </li>
+                    <li class="text-center bg-[#EEEEEE] text-[#3D3D3D] hover:bg-[#506CFF] hover:text-indigo-50 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-sm h-10 w-20 m-1 p-3 rounded-xl">
+                        <button type="button">지출</button>
+                    </li>
+                </ul>
+                <div class="text-sm border-2 m-1 p-3 rounded-xl border-[#3D3D3D]">
+                    전체 13건
+                </div>
+            </div>
+        </div>
+        <div class="min-w-[675px]">
+            <h1 class="text-base mt-4 ml-2 "><strong>2024.01.02</strong></h1>
+            <div class="flex justify-between">
+                <ul class="flex mt-4">
+                    <li class="text-center text-sm h-10 w-20 text-[#D61F1F] m-1 p-2 rounded-xl border-2 border-[#D61F1F]">
+                       식비
+                    </li>
+                    <li class="font-bold text-center text-sm h-10 w-16 m-1 p-2">
+                        짜장면
+                     </li>
+                     <li class="m-1 ml-28 p-2  text-[#3D3D3D]">
+                        카드
+                     </li>
+                </ul>
+                <div>
+                    <ul>
+                        <li class="text-[#D61F1F] mt-6">
+                            <strong>-9,000원</strong>
+                         </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-blue-100 border-t border-[1px] m-5"></div>
+
+        </div>
+
+        <div class="min-w-[675px]">
+            <h1 class="text-base mt-1 ml-2"><strong>2024.01.01</strong>
+            </h1>
+            <div class="flex justify-between">
+                <ul class="flex mt-4">
+                    <li class="text-center text-sm h-10 w-20 text-[#D61F1F] m-1 p-2 rounded-xl border-2 border-[#D61F1F]">
+                        식비
+                     </li>
+                     <li class="font-bold text-center text-sm h-10 w-16 m-1 p-2">
+                        짜장면
+                     </li>
+                     <li class="m-1 ml-28 p-2  text-[#484848]">
+                        카드
+                     </li>
+                </ul>
+                <div class="text-[#D61F1F] mt-6">
+                    <strong>-9,000원</strong>
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <ul class="flex mt-4">
+                    <li class="text-center text-sm h-10 w-20 text-[#506CFF] m-1 p-2 rounded-xl border-2 border-[#506CFF]">
+                       용돈
+                    </li>
+                    <li class="font-bold text-center text-sm h-10 w-16 m-1 p-2">
+                        용돈
+                     </li>
+                     <li class="m-1 ml-28 p-2  text-[#484848]">
+                        카드
+                     </li>
+                </ul>
+                <div class="text-[#506CFF] mt-6">
+                        <strong>+100,000원</strong>
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <ul class="flex mt-4">
+                    <li class="text-center text-sm h-10 w-20 text-[#D61F1F] m-1 p-2 rounded-xl border-2 border-[#D61F1F]">
+                       식비
+                    </li>
+                    <li class="font-bold text-center text-sm h-10 w-16 m-1 p-2 ">
+                        짜장면
+                     </li>
+                     <li class="m-1 ml-28 p-2  text-[#484848]">
+                        카드
+                     </li>
+                </ul>
+                <div class="text-[#D61F1F] mt-6"><strong>-9,000원</strong></div>
+            </div>
+            <div class="border-blue-100 border-t border-[1px] m-5"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+</html>
