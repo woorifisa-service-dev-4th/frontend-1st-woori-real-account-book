@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리REAL가계부</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="flex flex-col items-center pt-[50px]">
+    <div class="min-w-[675px] min-h-content">
+        <div class="flex flex-col items-center w-full">
+            <div class="flex flex-row justify-between w-full items-end h-[78px]">
+                <div class="flex flex-row items-center gap-2">
+                    <img src="images/vector-left-black-icon.png" alt="left icon"
+                         onclick="location.href='start.html'" class="w-[10px] pb-[15px] cursor-pointer" />
+                </div>
+
+                <div class="absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center">
+                    <h1 class="dark-mode-light-gray text-[#3C3C3C] text-[16px] weight-600">우리 REAL 가계부</h1>
+                    <p class="weight-600 text-[36px]">로그인</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col w-[300px] gap-12 pt-[10%]">
+                <div class="flex flex-col gap-3 w-full">
+                    <div class="flex flex-col gap-1">
+                        <p class="weight-500">아이디</p>
+                        <label>
+                            <input type="text" placeholder="아이디를 입력해주세요"
+                                   class="border border-[#929292] rounded-[8px] w-full h-[40px] px-[10px] py-[5px] text-[14px]">
+                        </label>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <p class="weight-500">비밀번호</p>
+                        <label>
+                            <input type="text" placeholder="비밀번호를 입력해주세요"
+                                   class="border border-[#929292] rounded-[8px] w-full h-[40px] px-[10px] py-[5px] text-[14px]">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                    <button class="hover:bg-[#3757ff] w-full rounded-[8px] bg-[#506CFF] text-white weight-500 w-[200px] py-2.5"
+                            onclick="location.href='main.html'">
+                        로그인
+                    </button>
+
+                    <div class="flex flex-row gap-2 justify-center pr-3">
+                        <a href="signup.html" class="hover:text-[#506CFF] text-[#787878] text-[14px] weight-400">아이디 찾기</a>
+                        <a href="signup.html" class="hover:text-[#506CFF] text-[#787878] text-[14px] weight-400">비밀번호 찾기</a>
+                        <a href="signup.html" class="hover:text-[#506CFF] text-[#787878] text-[14px] weight-400">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+</script>
