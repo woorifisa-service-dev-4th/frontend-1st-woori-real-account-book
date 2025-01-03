@@ -1,11 +1,11 @@
 main{
   width: 675px;
-  height: 1079px;
+  /*height: 1079px;*/
 }
 
 header {
   text-align: center;
-  padding: 20px 0;
+  /*padding: 20px 0;*/
   width = 675px;
 }
 
@@ -24,7 +24,7 @@ svg{
 
 .header-title {
   font-size: 16px;
-  font-weight: 400;
+  /*font-weight: 400;*/
   line-height: normal;
   margin-left : 20;
   
@@ -38,16 +38,12 @@ svg{
 
 .form-group {
   margin-bottom: 30px;
-  padding: 12px 20px;
 }
 
 
 label{
-  font-size: 19px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 25px;
-  color: #333;
+  font-size: 18px;
+  /*margin-bottom: 10px;*/
 }
 
 /* 종류 글씨 */
@@ -63,12 +59,12 @@ label{
 .w-btn-bule {
   position: relative;
   display: inline-block;
-  padding: 12px 30px;
+  padding: 6px 30px;
   font-weight: 600;
   border-radius: 8px;
   border: 1px solid #506CFF;
   background: #FFF;
-  margin: 20px;
+  /*margin: 20px;*/
 
   width: 95px;
   
@@ -94,14 +90,14 @@ label{
 .w-btn-red {
   position: relative;
   display: inline-block;
-  padding: 12px 30px;
+  padding: 6px 30px;
   font-weight: 600;
   border-radius: 8px;
   border: 1px solid #D61F1F;
   background: #FFF;
   width: 95px;
   flex-shrink: 0;
-  margin: 20px;
+  /*margin: 20px;*/
 }
 
 /* 지출 빨간색 안 버튼 */
