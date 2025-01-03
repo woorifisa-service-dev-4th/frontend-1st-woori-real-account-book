@@ -1,11 +1,9 @@
 main{
-  width: 1360px;
-  height: 1079px;
+  width: 675px;
 }
 
 header {
   text-align: center;
-  padding: 20px 0;
   width = 675px;
 }
 
@@ -17,17 +15,14 @@ svg{
   position:relative;
   left:-80px;
   top:-25px;
-
 }
-
 
 
 .header-title {
   font-size: 16px;
-  font-weight: 400;
   line-height: normal;
   margin-left : 20;
-  
+
 }
 
 .header-register {
@@ -38,16 +33,10 @@ svg{
 
 .form-group {
   margin-bottom: 30px;
-  padding: 12px 20px;
 }
 
-
 label{
-  font-size: 19px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 25px;
-  color: #333;
+  font-size: 18px;
 }
 
 /* 종류 글씨 */
@@ -63,130 +52,83 @@ label{
 .w-btn-bule {
   position: relative;
   display: inline-block;
-  padding: 12px 30px;
-  font-weight: 600;
+  padding: 6px 30px;
   border-radius: 8px;
   border: 1px solid #506CFF;
   background: #FFF;
-  margin: 20px;
+
 
   width: 95px;
-  
+
   flex-shrink: 0;
 
-  
+
 
 }
-
-/* 수입 파란색 버튼 안 글씨 */
-.in{
-  color: #506CFF;
-  text-align: center;
-  font-family: Pretendard;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
 
 /* 지출 빨간색 버튼 */
 .w-btn-red {
   position: relative;
   display: inline-block;
-  padding: 12px 30px;
+  padding: 6px 30px;
   font-weight: 600;
   border-radius: 8px;
   border: 1px solid #D61F1F;
   background: #FFF;
   width: 95px;
   flex-shrink: 0;
-  margin: 20px;
+  /*margin: 20px;*/
 }
-
-/* 지출 빨간색 안 버튼 */
-.out{
-  color: #D61F1F;
-  text-align: center;
-  font-family: Pretendard;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-
-
 
 
 #content {
-  font-weight: 400;
+  width: 434px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
 #amount {
-  font-weight: 400;
-}
-
-.input-container {
-  position: relative;
-  display: inline-block;
-}
-
-.input-container input {
   width: 300px;
-  padding-right: 50px; 
-  padding-left: 10px;
-  font-size: 14px;
   height: 40px;
-  box-sizing: border-box;
+  flex-shrink: 0;
 }
-
 
 .input-container .unit {
   position: absolute;
   top: 50%;
-  right: 90px; 
+  right: 50px;
   transform: translateY(-50%);
   font-size: 14px;
 
 }
 
-
-input[type='number'] {
-  -moz-appearance: textfield;
-}
-
-input{
-  width: 434px;
+#currentDate{
+  width: 204px;
   height: 40px;
   flex-shrink: 0;
-  padding: 20px;
-  border: 1px solid ;
-  border-radius: 5px;
+
+}
+
+#means{
+  width: 204px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+#category{
+  width: 204px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+
+
+/* 원 위치 조정 */
+.unit {
+  position: relative;
+  left: -35px;
   font-size: 14px;
 }
-
-
-
-.input-container{
-    width: 380px;
-
-}
-
-input[type="date"] {
-  height : 40px;
-  padding: 20px;
-  padding-bottom:10px;
-  font-size: 14px;
-  border: 1px solid;
-  border-radius: 5px;
-  width: 200px;
-  box-sizing: border-box;
-}
-
-
-
-
 
 
 
@@ -201,46 +143,24 @@ select {
   border: 1px solid ;
   border-radius: 5px;
   font-size: 14px;
-  
+
 }
 
 
 
+
+.button-text {
+  color: #FFFFFF;
+  font-size: 18px;
+
+}
+
 .register-button{
-  font-size: 14px;
+  font-size: 18px;
+  font-color : #FFFFFF;
   width: 434px;
   height: 45px;
   border-radius: 8px;
   background: #506CFF;
-  position:relative;
-  margin-left: auto;
-  margin-right:auto;
-  margin-bottom :100px;
-  position-bottom:100px;
-
+  margin-top: 60px;
 }
- 
-
-.button-text {
-  color: #FFF;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  position:relative;
-  text-align : center;
-  top:10px;
-  margin-bottom: 100px;
-}
-
-
-
-
-
-footer{
-  margin-top:200px;
-  align-items : flex-end;
-}
-
-
-

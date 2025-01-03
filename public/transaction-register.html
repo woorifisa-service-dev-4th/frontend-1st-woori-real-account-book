@@ -1,142 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>내역 등록</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="transaction-register.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>내역 등록</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="transaction-register.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
           },
         },
-      };
-    </script>
-  </head>
-  <body>
-    <div class="flex flex-col items-center pt-[50px]">
-      <div class="min-w-[675px]">
-        <header>
-          <div class="header-title">우리 REAL가계부</div>
-          <div class="header-register">내역 등록</div>
+      },
+    };
+  </script>
 
-          <div svg-left>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="30" viewBox="0 0 12 20" fill="none">
-              <path d="M4.54054 9.72973L12 2.27027L9.72973 0L0 9.72973L9.72973 19.4595L12 17.1892L4.54054 9.72973Z" fill="black"/>
-            </svg>
+<link rel="icon" href="images/favicon.png">
+</head>
+<body>
+<div class="flex flex-col items-center pt-[50px]">
+  <div class="min-w-[675px]">
+    <header>
+      <div class="flex flex-row justify-between w-full items-end h-[78px]">
+        <div class="flex flex-row items-center gap-2">
+          <img src="images/vector-left-black-icon.png" alt="left icon"
+               onclick="location.href='main.html'" class="w-[10px] pb-[15px] cursor-pointer" />
+        </div>
 
+        <div class="absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center">
+          <h1 class="dark-mode-light-gray text-[#3C3C3C] text-[16px] weight-600">우리 REAL 가계부</h1>
+          <p class="weight-600 text-[36px]">내역 등록</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex flex-col items-center w-full">
+      <div class="w-[434px] pt-[50px]">
+        <div class="form-group flex flex-col gap-2">
+          <label class="weight-600">종류</label>
+          <div class="flex flex-row gap-3">
+            <button class="hover:bg-[#506CFF] hover:text-white text-[#506CFF] w-btn-bule text-[14px] weight-600" type="button">수입</button>
+            <button class="hover:bg-[#D61F1F] hover:text-white text-[#D61F1F] w-btn-red text-[14px] weight-600" type="button">지출</button>
           </div>
+        </div>
 
-
-        </header>
-        
-        <main>
-        
-          
-          <div class="form-group">
-            <label>종류</label>
-            <div class="type">
-              <button class="w-btn-bule" type="button"><span class="in">수입</span></button>
-              <button class="w-btn-red" type="button"><span class="out">지출</span></button>
-            </div>
-          </div>
-          
-
-          <div class="form-group">
-            <label for="content">내역명</label>
-          </br>
-            <div>
-              <input class="input-content"
-                type="text"
-                id="content"
-                placeholder="  수입/지출 내역명을 입력해주세요"
-              />
-            </div>
-          </div>
-
-
-          <div class="form-group">
-            <label for="amount">변동 금액</label>
-          </br>
-            <div class="input-container">
-              <input
-                type="number"
-                id="amount"
-                placeholder="수입/지출 금액을 입력해주세요"
-              />
-              <span class="unit">원</span>
-
-            </div>  
-          </div>
-
-
-          <div class="form-group">
-            <label>날짜</label>
-            <input type="date" id="date" max="2099-12-31" min="2024-12-31"> 
-          </div>
-
-          
-
-          
-
-          <div class="form-group">
-            <label for="category">거래 수단</label>
-          </br>
-            <select name="transaction-means">
-              <option>현금</option>
-              <option>신용카드</option>
-              <option>체크카드</option>
-            </select>
-          </div>
-
-
-          <div class="form-group">
-            <label for="category">카테고리</label>
-          </br>
-            <select name="category-select">
-              <option>식비</option>
-              <option>쇼핑</option>
-              <option>공과금</option>
-              <option>교통비</option>
-              <option>경조사</option>
-            </select>
-          </div>
-
-          
-        <div class="register-button">
-          <div class="button-text">
-            <button type="button">등록</button>
+        <div class="form-group flex flex-col gap-2">
+          <label for="content" class="weight-600">내역명</label>
+          <div>
+            <input class="input-content border border-[#787878] rounded-[8px] px-[16px] py-[10px] text-[14px]"
+                   type="text"
+                   id="content"
+                   placeholder="수입/지출 내역명을 입력해주세요"
+            />
           </div>
         </div>
 
 
+        <div class="form-group flex flex-col gap-2">
+          <label class="weight-600">변동 금액</label>
+          <div class="flex flex-row gap-3 items-center">
+            <input class="input-amount border border-[#787878] rounded-[8px] px-[16px] py-[10px] text-[14px]"
+                   type="number"
+                   id="amount"
+                   placeholder=" 수입/지출 금액을 입력해주세요"
+            />
+            <span class="unit text-[13px]">원</span>
+          </div>
+        </div>
 
-        </form>
-        </main>
+        <div class="form-group flex flex-col gap-2">
+          <label class="weight-600">날짜</label>
+          <div class="flex flex-row gap-3">
+            <input type='date' id='currentDate' class="border border-[#787878] rounded-[8px] px-[12px] py-[12px] text-[14px]"/>
+            <script>
+              document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
+            </script>
+          </div>
+        </div>
+
+        <div class="form-group flex flex-col gap-2">
+          <label class="weight-600" for="category">거래 수단</label>
+
+          <select name="transaction-means" id="means" class="border border-[#787878] rounded-[8px] px-[12px] py-[10px] text-[14px]">
+            <option> 현금</option>
+            <option> 신용카드</option>
+            <option> 체크카드</option>
+          </select>
+        </div>
 
 
-        <footer class="w-full bg-[#F3F5FF] flex flex-col items-center justify-center py-10 bottom-0">
-          <p class="text-[#6A6A6A] text-[14px] weight-500">우리 REAL 가계부</p>
-          <p class="text-[#6A6A6A] text-[12px] weight-400">&copy; 2025 우리 REAL 가계부. 모든 권리 보유.</p>
-      </footer>
+        <div class="form-group flex flex-col gap-2">
+          <label class="weight-600" for="category">카테고리</label>
 
-  
-    </footer> 
+          <select name="category-select" id="category" class="border border-[#787878] rounded-[8px] px-[12px] py-[10px] text-[14px]">
+            <option> 식비</option>
+            <option> 쇼핑</option>
+            <option> 공과금</option>
+            <option> 교통비</option>
+            <option> 경조사</option>
+          </select>
+        </div>
 
-
-      
-
-        
-
-
+        <button type="button" class="register-button text-white mb-[80px]">등록</button>
       </div>
+
     </div>
-  </body>
+  </div>
+</div>
+
+
+
+</footer>
+<div id="footer"></div>
+</footer>
+</body>
 </html>
+
+<script>
+  fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer:', error));
+
+  // const nightMode = document.getElementById('nightMode');
+  // const dayMode = document.getElementById('dayMode');
+
+  // nightMode.addEventListener('click', () => {
+  //     document.body.classList.toggle('night-mode');
+  //     nightMode.classList.add('hidden');
+  //     dayMode.classList.remove('hidden');
+  // });
+
+  // dayMode.addEventListener('click', () => {
+  //     document.body.classList.toggle('night-mode');
+  //     dayMode.classList.add('hidden');
+  //     nightMode.classList.remove('hidden');
+  // });
+</script>
