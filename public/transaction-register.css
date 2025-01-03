@@ -1,5 +1,5 @@
 main{
-  width: 1360px;
+  width: 675px;
   height: 1079px;
 }
 
@@ -177,10 +177,9 @@ input[type="date"] {
   height : 40px;
   padding: 20px;
   padding-bottom:10px;
-  font-size: 14px;
-  border: 1px solid;
+  border: 1px solid; 
   border-radius: 5px;
-  width: 200px;
+  width: 200px; 
   box-sizing: border-box;
 }
 
@@ -216,6 +215,7 @@ select {
   margin-left: auto;
   margin-right:auto;
   margin-bottom :100px;
+  margin-top : 80px;
   position-bottom:100px;
 
 }
