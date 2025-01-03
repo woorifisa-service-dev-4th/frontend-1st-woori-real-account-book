@@ -6,10 +6,8 @@
     <title>지출분석</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="category-analysis.css">
-    <link rel="icon" href="images/favicon.png">
-
-
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/favicon.png">
 
     <script>
         tailwind.config = {
@@ -27,27 +25,38 @@
     <div class="flex-grow">
         <div class="flex flex-col items-center pt-[50px]">
             <div>
-                <div class="flex flex-col items-center pt-[50px]">
+                <div class="flex flex-col items-center">
                     <div class="min-w-[675px]">
                         <div class="flex flex-col items-center gap-12 w-full">
+
                         <div class="flex flex-row justify-between w-full items-end h-[78px]">
+
                             <div class="flex flex-row items-center gap-2">
-                                <a href="main.html">
-                                <img src="images/move-button.png" alt="move button" class="w-[20px] h-[30px]">
-                                </a>
-                                
+                                <img src="images/vector-left-black-icon.png" alt="left icon"
+                                     onclick="location.href='main.html'" class="w-[10px] pb-[15px] cursor-pointer" />
                             </div>
             
+                
+                            
+            
                             <div class="absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center">
-                                <h1 class="text-[#3C3C3C] text-[16px] weight-600">우리 REAL 가계부</h1>
+                                <h1 class="dark-mode-light-gray text-[#3C3C3C] text-[16px] weight-600">우리 REAL 가계부</h1>
                                 <div class="flex flex-row items-center justify-center gap-2">
-                                    <h2 class="weight-600 text-[36px]">지출 분석</h2>
+                                
+                                    <p class="weight-600 text-[36px]">지출 분석</p>
+                                    
                                 </div>
                             </div>
             
-                            <div class="flex flex-row gap-2">
-                                <img src="images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
-                                <p class="weight-600">홍길동님</p>
+                            <div class="flex flex-row items-end h-full justify-between h-full pb-1">
+                                <!--<img id="nightMode" src="images/night-mode-btn.png" alt="night mode" class="w-[30px] h-[30px]"> --> 
+                                <!--<img id="dayMode" src="images/day-mode-btn.png" alt="day mode" class="w-[30px] h-[30px] hidden">-->
+                                <div class="flex flex-row gap-2">
+                                    <div class="flex flex-row items-center gap-2">
+                                        <img src="images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
+                                        <p class="weight-600">홍길동님</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -55,7 +64,7 @@
                         <div class="flex mt-6 space-y-8 space-x-8 " style="width : 100%">
                             <!-- Pie chart section -->
                             <div class="relative flex flex-col">
-                                <h3 class=weight-600 text-[18px]>카테고리별 지출 내역</h3>
+                                <p class="weight-600 text-[18px]">카테고리별 지출 내역</p>
                                 <div class="relative w-[328px] h-[327px] flex-shrink-0 mt-4">
                                     <svg viewBox="0 0 32 32" class="absolute w-full h-full rounded-full">
                                         <!-- 전체 원 배경 -->
@@ -80,31 +89,31 @@
         
                             <div class="ml-30 space-y-4 flex flex-col items-center justify-center" style="width : 100%">
                                 <div class="flex items-center space-x-4 w-full">
-                                    <div class="flex justify-center items-center rounded-md ml-4" style="border-radius: 8px; background: #2141E8; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                    <div class="flex justify-center items-center rounded-md ml-16" style="border-radius: 8px; background: #2141E8; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
                                         <span class="text-white">1위 식비</span>
                                     </div>
                                     <span class="text-gray-700">350,000원</span>
                                 </div>
                                 <div class="flex items-center space-x-4 w-full">
-                                    <div class="flex justify-center items-center rounded-md ml-4" style="border-radius: 8px; background: #2447FF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                    <div class="flex justify-center items-center rounded-md ml-16" style="border-radius: 8px; background: #2447FF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
                                         <span class="text-white">2위 쇼핑</span>
                                     </div>
                                     <span class="text-gray-700">150,000원</span>
                                 </div>
                                 <div class="flex items-center space-x-4 w-full">
-                                    <div class="flex justify-center items-center rounded-md ml-4" style="border-radius: 8px; background: #506CFF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                    <div class="flex justify-center items-center rounded-md ml-16" style="border-radius: 8px; background: #506CFF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
                                         <span class="text-white">3위 공과금</span>
                                     </div>
                                     <span class="text-gray-700">100,000원</span>
                                 </div>
                                 <div class="flex items-center space-x-4 w-full">
-                                    <div class="flex justify-center items-center rounded-md ml-4" style="border-radius: 8px; background: #6C84FF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                    <div class="flex justify-center items-center rounded-md ml-16" style="border-radius: 8px; background: #6C84FF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
                                         <span class="text-white">4위 교통비</span>
                                     </div>
                                     <span class="text-gray-700">65,000원</span>
                                 </div>
                                 <div class="flex items-center space-x-4 w-full">
-                                    <div class="flex justify-center items-center rounded-md ml-4" style="border-radius: 8px; background: #9AAAFF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                                    <div class="flex justify-center items-center rounded-md ml-16" style="border-radius: 8px; background: #9AAAFF; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
                                         <span class="text-white">5위 경조사</span>
                                     </div>
                                     <span class="text-gray-700">50,000원</span>
@@ -115,11 +124,11 @@
                             <div class="flex flex-col gap-1.5 items-start w-full">
                                 <p class="weight-600 text-[18px]">01월 지출 내역 </p>
                                 <div class="flex space-x-4 mb-2 mt-1">
-                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#506CFF] text-white rounded-md">식비</button>
-                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#EEEEEE] text-black rounded-md">쇼핑</button>
-                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#EEEEEE] text-black rounded-md">공과금</button>
-                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#EEEEEE] text-black rounded-md">교통비</button>
-                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#EEEEEE] text-black rounded-md">경조사</button>
+                                    <button class=" w-[65px] h-[29px] flex-shrink-0  rounded-md  bg-[#EEEEEE]  hover:bg-[#506CFF] hover:text-white">식비</button>
+                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#EEEEEE] bg-[#EEEEEE]  hover:bg-[#506CFF] hover:text-white rounded-md">쇼핑</button>
+                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#EEEEEE] bg-[#EEEEEE]  hover:bg-[#506CFF] hover:text-white rounded-md">공과금</button>
+                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#EEEEEE] bg-[#EEEEEE]  hover:bg-[#506CFF] hover:text-white rounded-md">교통비</button>
+                                    <button class="w-[65px] h-[29px] flex-shrink-0 bg-[#EEEEEE] bg-[#EEEEEE]  hover:bg-[#506CFF] hover:text-white rounded-md">경조사</button>
                                 </div>
                                 
                                 
@@ -165,7 +174,30 @@
     </div>
 
 
+    <div id="footer"></div>
 </body>
-
 </html>
 
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+
+    const nightMode = document.getElementById('nightMode');
+    const dayMode = document.getElementById('dayMode');
+
+    nightMode.addEventListener('click', () => {
+        document.body.classList.toggle('night-mode');
+        nightMode.classList.add('hidden');
+        dayMode.classList.remove('hidden');
+    });
+
+    dayMode.addEventListener('click', () => {
+        document.body.classList.toggle('night-mode');
+        dayMode.classList.add('hidden');
+        nightMode.classList.remove('hidden');
+    });
+</script>
