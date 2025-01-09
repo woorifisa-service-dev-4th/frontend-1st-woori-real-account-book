@@ -60,16 +60,10 @@
 
 # 📏ESLint RuleSet
 
-```java
-export default [
-  {languageOptions: { globals: globals.browser }},
-	  pluginJs.configs.recommended,
-];
-```
-
-- eslint: standard : JavaScript Standard Style을 기반으로 한 규칙 세트
+- eslint: standard : JavaScript Standard Style(최신 ECMAScript 표준(ES6 이상)을 준수)을 기반으로 한 규칙 세트
 
 [ 주요 규칙 ]
+
 standard는 코드 스타일 관련 규칙에 중점을 둡니다. recommended와 비교해 더 엄격하고 구체적인 규칙을 따릅니다. 대표적인 예는 다음과 같습니다:
 
 1. 세미콜론 금지
