@@ -37,21 +37,20 @@
     <link rel="icon" href="../images/favicon.png">
 </head>
 <body class="flex flex-col min-h-screen">
-<div class="flex-grow">
-    <div class="flex flex-col items-center pt-[50px] pb-[70px]">
-        <div>
-            <div class="flex flex-col items-center">
-                <div class="min-w-[675px]">
-                    <div class="flex flex-col items-center gap-12 w-full">
+    <div class="flex-grow">
+        <div class="flex flex-col items-center pt-[50px] pb-[70px]">
+            <div>
+                <div class="flex flex-col items-center">
+                    <div class="min-w-[675px]">
+                        <div class="flex flex-col items-center gap-12 w-full">
 
-                        <!-- 헤더 섹션 -->
-                        <div class="flex flex-row justify-between w-full items-end h-[78px]">
-                            <!-- 이전 버튼 -->
-                            <div class="flex flex-row items-center gap-2">
-                                <img src="../images/vector-left-black-icon.png" alt="left icon"
-                                     onclick="location.href='main.html'" class="w-[10px] pb-[15px] cursor-pointer" />
-                            </div>
-
+                            <!-- 헤더 섹션 -->
+                            <div class="flex flex-row justify-between w-full items-end h-[78px]">
+                                <!-- 이전 버튼 -->
+                                <div class="flex flex-row items-center gap-2">
+                                    <img src="../images/vector-left-black-icon.png" alt="left icon"
+                                         onclick="location.href='main.html'" class="w-[10px] pb-[15px] cursor-pointer" />
+                                </div>
 
                                 <!-- 제목 -->
                                 <div class="absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center">
@@ -59,96 +58,94 @@
                                     <div class="flex flex-row items-center justify-center gap-2">
                                         <p class="weight-600 text-[36px]">1월 지출 분석</p>
                                     </div>
+                                </div>
 
+                                <!-- 사용자 프로필 -->
+                                <div class="flex flex-row gap-2">
+                                    <div class="flex flex-row items-center gap-2">
+                                        <img src="../images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
+                                        <p class="weight-600">홍길동님</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- 사용자 프로필 -->
-                            <div class="flex flex-row gap-2">
-                                <div class="flex flex-row items-center gap-2">
-                                    <img src="../images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
-                                    <p class="weight-600">홍길동님</p>
+                            <!-- 도넛 차트와 카테고리 순위 -->
+                            <div class="flex flex-row justify-center items-center  gap-12 mt-6 w-full">
+                                <!-- 도넛 차트 -->
+                                <div class="flex flex-col w-full items-center">
+                                    <p class="weight-600 text-[18px] text-left w-full">카테고리별 지출 내역</p>
+                                    <div id="chart-container" class="relative w-[328px] h-[327px] mt-4">
+                                        <canvas id="myDoughnutChart"></canvas>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- 도넛 차트와 카테고리 순위 -->
-                        <div class="flex flex-row justify-center items-center  gap-12 mt-6 w-full">
-                            <!-- 도넛 차트 -->
-                            <div class="flex flex-col w-full items-center">
-                                <p class="weight-600 text-[18px] text-left w-full">카테고리별 지출 내역</p>
-                                <div id="chart-container" class="relative w-[328px] h-[327px] mt-4">
-                                    <canvas id="myDoughnutChart"></canvas>
+                                <!-- 카테고리 순위 -->
+                                <div id="category-rank" class="flex flex-col space-y-4 justify-center items-start  flex-grow w-full">
+                                    <!-- 동적으로 카테고리 순위가 업데이트됨 -->
                                 </div>
                             </div>
 
-                            <!-- 카테고리 순위 -->
-                            <div id="category-rank" class="flex flex-col space-y-4 justify-center items-start  flex-grow w-full">
-                                <!-- 동적으로 카테고리 순위가 업데이트됨 -->
-                            </div>
-                        </div>
-
-                        <!-- 01월 지출 내역 -->
-                        <div class="flex flex-col gap-4 items-start w-full mt-8">
-                            <p class="weight-600 text-[18px]">01월 지출 내역</p>
-                            <div class="flex flex-wrap gap-4">
-                                <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
-                                        id="food">
-                                    식비
-                                </button>
-                                <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
-                                        id="shopping">
-                                    쇼핑
-                                </button>
-                                <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
-                                        id="utilityBills">
-                                    공과금
-                                </button>
-                                <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
-                                        id="transport">
-                                    교통비
-                                </button>
-                                <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
-                                        id="congratulation">
-                                    경조사
-                                </button>
-                            </div>
-
-
-                            <div class="flex flex-row gap-1 bg-[#F9F8F8] rounded-[16px] w-full pt-10 pb-7">
-                                <div class="flex flex-row justify-center gap-6 w-full items-end">
-                                    <div class="flex flex-col items-center gap-1">
-                                        <p class="text-[#506CFF] text-[14px] weight-600">350,000</p>
-                                        <div class="bg-[#506CFF] w-[35px] h-[130px] rounded-[4px]"></div>
-                                        <p class="weight-500 text-[14px]">1월 첫째주</p>
-                                    </div>
-
-                                    <div class="flex flex-col items-center gap-1">
-                                        <p class="text-[#506CFF] text-[14px] weight-600">350,000</p>
-                                        <div class="bg-[#B6B6B6] w-[35px] h-[6px] rounded-[4px]"></div>
-                                        <p class="weight-500 text-[14px]">1월 둘째주</p>
-                                    </div>
-
-                                    <div class="flex flex-col items-center gap-1">
-                                        <div class="bg-[#B6B6B6] w-[35px] h-[6px] rounded-[4px]"></div>
-                                        <p class="weight-500 text-[14px]">1월 셋째주</p>
-                                    </div>
-
-                                    <div class="flex flex-col items-center gap-1">
-                                        <div class="bg-[#B6B6B6] w-[35px] h-[6px] rounded-[4px]"></div>
-                                        <p class="weight-500 text-[14px]">1월 넷째주</p>
-                                    </div>
-
-                                    <div class="flex flex-col items-center gap-1">
-
-                                        <div class="bg-[#B6B6B6] w-[35px] h-[6px] rounded-[4px]"></div>
-                                        <p class="weight-500 text-[14px]">1월 다섯째주</p>
-                                    </div>
-
+                            <!-- 01월 지출 내역 -->
+                            <div class="flex flex-col gap-4 items-start w-full mt-8">
+                                <p class="weight-600 text-[18px]">01월 지출 내역</p>
+                                <div class="flex flex-wrap gap-4">
+                                    <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
+                                    id="food">
+                                        식비
+                                    </button>
+                                    <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
+                                    id="shopping">
+                                        쇼핑
+                                    </button>
+                                    <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
+                                    id="utilityBills">
+                                        공과금
+                                    </button>
+                                    <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
+                                    id="transport">
+                                        교통비
+                                    </button>
+                                    <button class="w-[65px] h-[29px] rounded-md bg-[#EEEEEE] hover:bg-[#506CFF] hover:text-white"
+                                    id="congratulation">
+                                        경조사
+                                    </button>
                                 </div>
-                            </div>
 
-                        </div>
+
+                                <div class="flex flex-row gap-1 bg-[#F9F8F8] rounded-[16px] w-full pt-10 pb-7">
+                                    <div class="flex flex-row justify-center gap-6 w-full items-end">
+                                        <div class="flex flex-col items-center gap-1">
+                                            <p class="text-[#506CFF] text-[14px] weight-600">350,000</p>
+                                            <div class="bg-[#506CFF] w-[35px] h-[130px] rounded-[4px]"></div>
+                                            <p class="weight-500 text-[14px]">1월 첫째주</p>
+                                        </div>
+
+                                        <div class="flex flex-col items-center gap-1">
+                                            <p class="text-[#506CFF] text-[14px] weight-600">350,000</p>
+                                            <div class="bg-[#B6B6B6] w-[35px] h-[6px] rounded-[4px]"></div>
+                                            <p class="weight-500 text-[14px]">1월 둘째주</p>
+                                        </div>
+
+                                        <div class="flex flex-col items-center gap-1">
+                                            <div class="bg-[#B6B6B6] w-[35px] h-[6px] rounded-[4px]"></div>
+                                            <p class="weight-500 text-[14px]">1월 셋째주</p>
+                                        </div>
+
+                                        <div class="flex flex-col items-center gap-1">
+                                            <div class="bg-[#B6B6B6] w-[35px] h-[6px] rounded-[4px]"></div>
+                                            <p class="weight-500 text-[14px]">1월 넷째주</p>
+                                        </div>
+
+                                        <div class="flex flex-col items-center gap-1">
+
+                                            <div class="bg-[#B6B6B6] w-[35px] h-[6px] rounded-[4px]"></div>
+                                            <p class="weight-500 text-[14px]">1월 다섯째주</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
                     </div>
                 </div>
 
@@ -159,7 +156,7 @@
 
 
     <div id="footer"></div>
-</div>
+    </div>
 </body>
 </html>
 
