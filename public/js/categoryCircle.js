@@ -56,21 +56,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dataPercentages = categoryPercentages.map(item => parseFloat(item.percentage)); // 비율
 
+    // 색상 정의
+    const colors = [
+        "#2141E8",
+        "#2447FF",
+        "#506CFF",
+        "#6C84FF",
+        "#9AAAFF",
+    ];
+
     // 데이터 및 옵션 설정
     const expData = {
         labels: labels,
         datasets: [
             {
-                data: dataPercentages, // 동적으로 계산된 비율 사용
+                data: dataPercentages,
                 borderWidth: 2,
                 hoverBorderWidth: 3,
-                backgroundColor: [
-                    "#2141E8", // 색상은 고정 (필요시 동적 색상 설정 가능)
-                    "#2447FF",
-                    "#506CFF",
-                    "#6C84FF",
-                    "#9AAAFF",
-                ],
+                backgroundColor: colors,
                 fill: true,
             },
         ],
@@ -78,13 +81,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const options = {
         responsive: true,
-        maintainAspectRatio: false, // 기본 비율 유지하지 않음
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,
-                position: "right", // 범례를 오른쪽에 배치
+                position: "right",
             },
         },
+        animation: {
+            duration: 3500, // 애니메이션 지속 시간 (밀리초)
+            easing: "easeInOutQuart", // 애니메이션 효과
+        },
+        responsiveAnimationDuration: 3000, // 반응형 크기 조정 시 애니메이션 지속 시간
     };
 
     // 차트 생성
@@ -93,5 +101,25 @@ document.addEventListener('DOMContentLoaded', () => {
         type: "doughnut",
         data: expData,
         options: options,
+    });
+
+    // 순위별로 렌더링
+    const rankContainer = document.getElementById("category-rank");
+// 기존 요소를 비우지 않고 업데이트
+    while (rankContainer.firstChild) {
+        rankContainer.removeChild(rankContainer.firstChild);
+    }
+
+    categoryPercentages.forEach((item, index) => {
+        const rankItem = document.createElement("div");
+        rankItem.className = "flex items-center w-full space-x-4 w-full"; // Flexbox 클래스 유지
+        rankItem.innerHTML = `
+            <div class="flex justify-center items-center rounded-md " 
+                style="border-radius: 8px; background: ${colors[index]}; width: 100px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                <span class="text-white">${index + 1}위 ${categoryMapping[item.category] || item.category}</span>
+            </div>
+            <span class="text-gray-700">${item.totalAmount.toLocaleString()}원</span>
+        `;
+        rankContainer.appendChild(rankItem);
     });
 });
