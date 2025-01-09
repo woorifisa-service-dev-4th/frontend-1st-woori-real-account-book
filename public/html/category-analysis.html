@@ -9,6 +9,19 @@
     <script src="../js/categoryCircle.js" defer></script>
     <script src="../js/categoryGraph.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #chart-container {
+            width: 75%; /* 기존 50%에서 75%로 증가 */
+            margin: auto;
+            text-align: center;
+        }
+        canvas {
+            max-width: 100%;
+            height: 320px; /* TODO 높이를 직접 지정하는 것에서 변경해보기*/
+        }
+    </style>
+
 
     <script>
         tailwind.config = {
@@ -68,20 +81,11 @@
                             <div class="relative flex flex-col">
                                 <p class="weight-600 text-[18px]">카테고리별 지출 내역</p>
                                 <div class="relative w-[328px] h-[327px] flex-shrink-0 mt-4">
-                                    <svg viewBox="0 0 32 32" class="absolute w-full h-full rounded-full">
-                                        <!-- 전체 원 배경 -->
-                                        <circle r="16" cx="16" cy="16" fill="white" />
-                                        <!-- 식비 46.7% -->
-                                        <circle r="16" cx="16" cy="16" fill="transparent" stroke="#2141E8" stroke-width="16" stroke-dasharray="47 48" transform="rotate(-90 16 16)" />
-                                        <!-- 쇼핑 20% -->
-                                        <circle r="16" cx="16" cy="16" fill="transparent" stroke="#2447FF" stroke-width="16" stroke-dasharray="20 84" transform="rotate(76.7 16 16)" />
-                                        <!-- 공과금 13.3% -->
-                                        <circle r="16" cx="16" cy="16" fill="transparent" stroke="#506CFF" stroke-width="16" stroke-dasharray="14 85" transform="rotate(152.7 16 16)" />
-                                        <!-- 교통비 8.7% -->
-                                        <circle r="16" cx="16" cy="16" fill="transparent" stroke="#6C84FF" stroke-width="16" stroke-dasharray="9 90" transform="rotate(196 16 16)" />
-                                        <!-- 경조사 6.7% -->
-                                        <circle r="16" cx="16" cy="16" fill="transparent" stroke="#9AAAFF" stroke-width="16" stroke-dasharray="7 90" transform="rotate(227.4 16 16)" />
-                                    </svg>
+                                    <div id="chart-container">
+                                        <canvas id="myDoughnutChart"></canvas>
+                                    </div>
+                                    <script src="../js/categoryCircle.js"></script>
+
                                     
                                 </div>
                                   
