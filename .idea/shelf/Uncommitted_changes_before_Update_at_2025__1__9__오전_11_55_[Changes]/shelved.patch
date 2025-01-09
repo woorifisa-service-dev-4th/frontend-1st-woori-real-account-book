@@ -1,0 +1,99 @@
+Index: public/html/main.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>우리REAL가계부</title>\n    <link rel=\"stylesheet\" href=\"../css/style.css\">\n    <link rel=\"stylesheet\" href=\"../css/main.css\">\n    <script src=\"https://cdn.tailwindcss.com\"></script>\n    <script src=\"../js/totalAmount.js\" defer></script>\n    <script src=\"../js/totalDetail.js\" defer></script>\n    <link rel=\"icon\" href=\"../images/favicon.png\">\n    <link rel=\"icon\" href=\"/images/favicon.png\">\n    <script>\n        tailwind.config = {\n            theme: {\n                extend: {\n                    colors: {\n                        clifford: '#da373d',\n                    }\n                }\n            }\n        }\n    </script>\n</head>\n<body>\n<div class=\"flex flex-col items-center pt-[50px] pb-[70px]\">\n    <div class=\"min-w-[675px] min-h-content\">\n        <div class=\"flex flex-col items-center gap-14 w-full\">\n            <div class=\"flex flex-row justify-between w-full items-end h-[78px]\">\n                <div class=\"flex flex-row items-center gap-2\">\n                    <img src=\"../images/user-profile-default.png\" alt=\"user profile\" class=\"w-[30px] h-[30px]\">\n                    <p class=\"weight-600\">홍길동님</p>\n                </div>\n\n                <div class=\"absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center\">\n                    <h1 class=\"dark-mode-light-gray text-[#3C3C3C] text-[16px] weight-600\">우리 REAL 가계부</h1>\n                    <div class=\"flex flex-row items-center justify-center gap-2\">\n                        <img id=\"prevDateBtn\" src=\"../images/vector-left-gray-icon.png\"\n                             alt=\"left icon\" class=\"w-[22px] cursor-pointer\" />\n                        <p id=\"nowDate\" class=\"weight-600 text-[36px]\">2025.01</p>\n                        <img id=\"nextDateBtn\" src=\"../images/vector-right-gray-icon.png\"\n                             alt=\"right icon\" class=\"w-[22px] cursor-pointer\" />\n                    </div>\n                </div>\n\n                <div class=\"flex flex-col items-end h-full justify-between\">\n                    <img id=\"nightMode\" src=\"../images/night-mode-btn.png\" alt=\"night mode\" class=\"w-[30px] h-[30px]\">\n                    <img id=\"dayMode\" src=\"../images/day-mode-btn.png\" alt=\"day mode\" class=\"w-[30px] h-[30px] hidden\">\n                    <div class=\"flex flex-row gap-2\">\n                        <button class=\"hover:bg-[#506CFF] hover:text-white rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]\"\n                                onclick=\"location.href='category-analysis.html'\">\n                            분석 보기\n                        </button>\n                        <button class=\"hover:bg-[#506CFF] hover:text-white rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]\"\n                                onclick=\"location.href='transaction-register.html'\">\n                            내역 등록\n                        </button>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"flex flex-row w-full justify-between\">\n                <div class=\"hover:bg-[#d9dfff] flex flex-col justify-between rounded-[16px] bg-[#E6EAFF] p-5 w-[327px] h-[180px]\">\n                    <p class=\"black-text weight-600 text-[18px]\">이번달 총 수입</p>\n\n                    <div class=\"flex flex-col\">\n                        <p class=\"dark-gray-text text-[#5E5E5E] text-[14px] weight-500\">저번달보다 1,000,000원 늘었어요\uD83E\uDD70</p>\n                        <p class=\"black-text weight-600 text-[26px]\">1,000,000원</p>\n                    </div>\n                </div>\n\n                <div class=\"hover:bg-[#3959ff] flex flex-col justify-between rounded-[16px] bg-[#506CFF] p-5 w-[327px] h-[180px]\">\n                    <p class=\"weight-600 text-[18px] text-white\">이번달 총 지출</p>\n\n                    <div class=\"flex flex-col\">\n                        <p class=\"text-[#5E5E5E] text-[14px] text-[#DBDBDB] weight-500\">수입보다 1,000,000원 더 썼어요\uD83D\uDE22</p>\n                        <p class=\"weight-600 text-[26px] text-white\">2,000,000원</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"flex flex-col gap-1.5 items-start w-full\">\n                <p class=\"weight-600 text-[18px]\">저번달보다 <span class=\"text-[#D61F1F] text-[20px] weight-700\">500,000원 더</span> 많이 썼어요</p>\n                <div class=\"flex flex-row gap-1 bg-[#F9F8F8] rounded-[16px] w-full pt-10 pb-7\">\n                    <div class=\"flex flex-row justify-center gap-6 w-full items-end\">\n                        <div class=\"flex flex-col items-center gap-1\">\n                            <p class=\"gray-text text-[#B6B6B6] text-[14px] weight-600\">500,000</p>\n                            <div class=\"bg-[#B6B6B6] w-[35px] h-[55px] rounded-[4px]\"></div>\n                            <p class=\"black-text weight-500 text-[14px]\">8월</p>\n                        </div>\n\n                        <div class=\"flex flex-col items-center gap-1\">\n                            <p class=\"gray-text text-[#B6B6B6] text-[14px] weight-600\">1,500,000</p>\n                            <div class=\"bg-[#B6B6B6] w-[35px] h-[80px] rounded-[4px]\"></div>\n                            <p class=\"black-text weight-500 text-[14px]\">9월</p>\n                        </div>\n\n                        <div class=\"flex flex-col items-center gap-1\">\n                            <p class=\"gray-text text-[#B6B6B6] text-[14px] weight-600\">2,000,000</p>\n                            <div class=\"bg-[#B6B6B6] w-[35px] h-[130px] rounded-[4px]\"></div>\n                            <p class=\"black-text weight-500 text-[14px]\">10월</p>\n                        </div>\n\n                        <div class=\"flex flex-col items-center gap-1\">\n                            <p class=\"gray-text text-[#B6B6B6] text-[14px] weight-600\">1,500,000</p>\n                            <div class=\"bg-[#B6B6B6] w-[35px] h-[80px] rounded-[4px]\"></div>\n                            <p class=\"black-text weight-500 text-[14px]\">11월</p>\n                        </div>\n\n                        <div class=\"flex flex-col items-center gap-1\">\n                            <p class=\"gray-text text-[#B6B6B6] text-[14px] weight-600\">1,700,000</p>\n                            <div class=\"bg-[#B6B6B6] w-[35px] h-[100px] rounded-[4px]\"></div>\n                            <p class=\"black-text weight-500 text-[14px]\">12월</p>\n                        </div>\n\n                        <div class=\"flex flex-col items-center gap-1\">\n                            <p class=\"gray-text text-[#506CFF] text-[14px] weight-600\">2,000,000</p>\n                            <div class=\"bg-[#506CFF] w-[35px] h-[130px] rounded-[4px]\"></div>\n                            <p class=\"black-text weight-500 text-[14px]\">이번 달</p>\n                        </div>\n                    </div>\n                </div>\n\n            </div>\n\n            <div id=\"inputOutput\"></div>\n        </div>\n    </div>\n</div>\n\n<div id=\"footer\"></div>\n</body>\n</html>\n\n<script>\n    fetch('footer.html')\n        .then(response => response.text())\n        .then(data => {\n            document.getElementById('footer').innerHTML = data;\n        })\n        .catch(error => console.error('Error loading footer:', error));\n\n    fetch('inputoutput.html')\n        .then(response => response.text())\n        .then(data => {\n            document.getElementById('inputOutput').innerHTML = data;\n        })\n        .catch(error => console.error('Error loading input-output:', error));\n\n    const nightMode = document.getElementById('nightMode');\n    const dayMode = document.getElementById('dayMode');\n\n    nightMode.addEventListener('click', () => {\n        document.body.classList.toggle('night-mode');\n        nightMode.classList.add('hidden');\n        dayMode.classList.remove('hidden');\n    });\n\n    dayMode.addEventListener('click', () => {\n        document.body.classList.toggle('night-mode');\n        dayMode.classList.add('hidden');\n        nightMode.classList.remove('hidden');\n    });\n</script>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/html/main.html b/public/html/main.html
+--- a/public/html/main.html	(revision 53563d2ad5e33c09e3803b25f23d31e32a125a70)
++++ b/public/html/main.html	(date 1736391224377)
+@@ -62,7 +62,7 @@
+ 
+             <div class="flex flex-row w-full justify-between">
+                 <div class="hover:bg-[#d9dfff] flex flex-col justify-between rounded-[16px] bg-[#E6EAFF] p-5 w-[327px] h-[180px]">
+-                    <p class="black-text weight-600 text-[18px]">이번달 총 수입</p>
++                    <p class="black-text weight-600 text-[18px]"><span class="nowMonth">1</span>월 총 수입</p>
+ 
+                     <div class="flex flex-col">
+                         <p class="dark-gray-text text-[#5E5E5E] text-[14px] weight-500">저번달보다 1,000,000원 늘었어요🥰</p>
+@@ -71,7 +71,7 @@
+                 </div>
+ 
+                 <div class="hover:bg-[#3959ff] flex flex-col justify-between rounded-[16px] bg-[#506CFF] p-5 w-[327px] h-[180px]">
+-                    <p class="weight-600 text-[18px] text-white">이번달 총 지출</p>
++                    <p class="weight-600 text-[18px] text-white"><span class="nowMonth">1</span>월 총 지출</p>
+ 
+                     <div class="flex flex-col">
+                         <p class="text-[#5E5E5E] text-[14px] text-[#DBDBDB] weight-500">수입보다 1,000,000원 더 썼어요😢</p>
+Index: public/js/totalAmount.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>document.addEventListener('DOMContentLoaded', () => {\n    const prevDateBtn = document.getElementById('prevDateBtn');\n    const nextDateBtn = document.getElementById('nextDateBtn');\n    const nowDate = document.getElementById('nowDate');\n\n    /**\n     * 날짜 이동 버튼 클릭 이벤트\n     * - 현재 날짜 이상으로는 이동되지 않는다\n     * - 이동 가능 날짜: 2024.07.01 ~ 2025.01\n     * - 월단위 이동 (ex. 2024.01 -> 2024.02)\n     */\n    try {\n        prevDateBtn.addEventListener('click', () => {\n            const nowDateValue = nowDate.textContent;\n            const nowDateValueArr = nowDateValue.split('.');\n            const nowYear = nowDateValueArr[0];\n            const nowMonth = nowDateValueArr[1];\n\n            if (nowYear === '2024' && nowMonth === '07') {\n                return;\n            }\n\n            const prevDate = new Date(nowYear, nowMonth - 2);\n            const prevYear = prevDate.getFullYear();\n            const prevMonth = prevDate.getMonth() + 1;\n\n            nowDate.textContent = `${prevYear}.${prevMonth < 10 ? '0' + prevMonth : prevMonth}`;\n        });\n\n        nextDateBtn.addEventListener('click', () => {\n            const nowDateValue = nowDate.textContent;\n            const nowDateValueArr = nowDateValue.split('.');\n            const nowYear = nowDateValueArr[0];\n            const nowMonth = nowDateValueArr[1];\n\n            if (nowYear === '2025' && nowMonth === '01') {\n                return;\n            }\n\n            const nextDate = new Date(nowYear, nowMonth);\n            const nextYear = nextDate.getFullYear();\n            const nextMonth = nextDate.getMonth() + 1;\n\n            nowDate.textContent = `${nextYear}.${nextMonth < 10 ? '0' + nextMonth : nextMonth}`;\n        });\n    } catch (error) {\n        console.error(error);\n    }\n});
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/js/totalAmount.js b/public/js/totalAmount.js
+--- a/public/js/totalAmount.js	(revision 53563d2ad5e33c09e3803b25f23d31e32a125a70)
++++ b/public/js/totalAmount.js	(date 1736391224377)
+@@ -1,12 +1,29 @@
+-document.addEventListener('DOMContentLoaded', () => {
++document.addEventListener('DOMContentLoaded', async () => {
+     const prevDateBtn = document.getElementById('prevDateBtn');
+     const nextDateBtn = document.getElementById('nextDateBtn');
+     const nowDate = document.getElementById('nowDate');
++    const nowMonthClass = document.getElementsByClassName('nowMonth');
++
++    let sampleData;
++
++    // sampleDataDivision.json 데이터 반환 함수
++    const getSampleData = async () => {
++        try {
++            const response = await fetch('../json/sampleDataDivision.json');
++            sampleData = await response.json();
++        } catch (error) {
++            console.error(error);
++        }
++    };
++
++    // sampleDataDivision.json 데이터 반환
++    await getSampleData();
++    // console.log(sampleData);
+ 
+     /**
+      * 날짜 이동 버튼 클릭 이벤트
+      * - 현재 날짜 이상으로는 이동되지 않는다
+-     * - 이동 가능 날짜: 2024.07.01 ~ 2025.01
++     * - 이동 가능 날짜: 2024.08.01 ~ 2025.01
+      * - 월단위 이동 (ex. 2024.01 -> 2024.02)
+      */
+     try {
+@@ -16,7 +33,7 @@
+             const nowYear = nowDateValueArr[0];
+             const nowMonth = nowDateValueArr[1];
+ 
+-            if (nowYear === '2024' && nowMonth === '07') {
++            if (nowYear === '2024' && nowMonth === '08') {
+                 return;
+             }
+ 
+@@ -25,6 +42,9 @@
+             const prevMonth = prevDate.getMonth() + 1;
+ 
+             nowDate.textContent = `${prevYear}.${prevMonth < 10 ? '0' + prevMonth : prevMonth}`;
++            Array.from(nowMonthClass).forEach(month => {
++                month.textContent = `${prevMonth}`;
++            });
+         });
+ 
+         nextDateBtn.addEventListener('click', () => {
+@@ -42,6 +62,9 @@
+             const nextMonth = nextDate.getMonth() + 1;
+ 
+             nowDate.textContent = `${nextYear}.${nextMonth < 10 ? '0' + nextMonth : nextMonth}`;
++            Array.from(nowMonthClass).forEach(month => {
++                month.textContent = `${nextMonth}`;
++            });
+         });
+     } catch (error) {
+         console.error(error);

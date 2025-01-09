@@ -1,18 +1,21 @@
+<script src="../js/totalAmount.js" defer></script>
+
 <div class="min-w-[675px]">
     <h1 class="weight-600 text-[20px]">01월 내역</h1>
     <div class="flex justify-between mt-4">
         <div class="flex flex-row gap-2">
-            <button class="bg-[rgb(47,82,255)] text-white hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
+            <button id="totalBtn" class="bg-[rgb(47,82,255)] text-white hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
                     onclick="">전체</button>
-            <button class="bg-[#EEEEEE] text-[#282828] hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
+            <button id="incomeBtn" class="bg-[#EEEEEE] text-[#282828] hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
                     onclick="">수입</button>
-            <button class="bg-[#EEEEEE] text-[#282828] hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
+            <button id="expendBtn" class="bg-[#EEEEEE] text-[#282828] hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
                     onclick="">지출</button>
         </div>
-        <div class="text-[14px]  weight-500 border-2 px-[12px] py-[4px] rounded-[8px] border-[#3D3D3D]">전체 13건</div>
+        <p id="detailCounts"
+           class="text-[14px] weight-500 border-2 px-[12px] py-[4px] rounded-[8px] border-[#3D3D3D]">13건</p>
     </div>
 </div>
-<div class="min-w-[675px]">
+<div id="transaction-list" class="min-w-[675px]">
     <h1 class="text-base mt-9 weight-500">2024.01.02</h1>
     <div class="flex justify-between mt-4">
         <ul class="flex flex-row">

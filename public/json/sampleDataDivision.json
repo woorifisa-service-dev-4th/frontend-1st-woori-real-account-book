@@ -1,0 +1,2229 @@
+{
+  "income": [
+    {
+      "yearMonth": 2407,
+      "details": [
+        {
+          "id": 1,
+          "date": "2024.07.01",
+          "type": "income",
+          "title": "7월 급여 입금",
+          "amount": 3000000,
+          "method": "checkCard",
+          "category": "salary"
+        },
+        {
+          "id": 2,
+          "date": "2024.07.05",
+          "type": "income",
+          "title": "프리랜스 프로젝트 지급",
+          "amount": 400000,
+          "method": "cash",
+          "category": "salary"
+        }
+      ]
+    },
+    {
+      "yearMonth": 2408,
+      "details": [
+        {
+          "id": 41,
+          "date": "2024.08.01",
+          "type": "income",
+          "title": "8월 급여 입금",
+          "amount": 3000000,
+          "method": "checkCard",
+          "category": "salary"
+        },
+        {
+          "id": 42,
+          "date": "2024.08.05",
+          "type": "income",
+          "title": "프리랜스 프로젝트 지급",
+          "amount": 400000,
+          "method": "cash",
+          "category": "salary"
+        }
+
+
+      ]
+    },
+    {
+      "yearMonth": 2409,
+      "details": [
+
+        {
+          "id": 81,
+          "date": "2024.09.01",
+          "type": "income",
+          "title": "9월 급여 입금",
+          "amount": 3000000,
+          "method": "checkCard",
+          "category": "salary"
+        }
+      ]
+    },
+    {
+      "yearMonth": 2410,
+      "details": [
+        {
+          "id": 121,
+          "date": "2024.10.01",
+          "type": "income",
+          "title": "10월 급여 입금",
+          "amount": 3000000,
+          "method": "checkCard",
+          "category": "salary"
+        },
+        {
+          "id": 122,
+          "date": "2024.10.05",
+          "type": "income",
+          "title": "프리랜스 프로젝트 지급",
+          "amount": 400000,
+          "method": "cash",
+          "category": "salary"
+        }
+
+      ]
+    },
+    {
+      "yearMonth": 2411,
+      "details": [
+
+        {
+          "id": 161,
+          "date": "2024.11.01",
+          "type": "income",
+          "title": "11월 급여 입금",
+          "amount": 3000000,
+          "method": "checkCard",
+          "category": "salary"
+        },
+        {
+          "id": 162,
+          "date": "2024.11.05",
+          "type": "income",
+          "title": "프리랜스 프로젝트 지급",
+          "amount": 400000,
+          "method": "cash",
+          "category": "salary"
+        }
+
+      ]
+    },
+    {
+      "yearMonth": 2412,
+      "details": [
+        {
+          "id": 201,
+          "date": "2024.12.01",
+          "type": "income",
+          "title": "12월 급여 입금",
+          "amount": 3000000,
+          "method": "checkCard",
+          "category": "salary"
+        },
+        {
+          "id": 202,
+          "date": "2024.12.05",
+          "type": "income",
+          "title": "프리랜스 프로젝트 지급",
+          "amount": 400000,
+          "method": "cash",
+          "category": "salary"
+        }
+
+
+      ]
+    },
+    {
+      "yearMonth": 2501,
+      "details": [
+
+        {
+          "id": 241,
+          "date": "2025.01.01",
+          "type": "income",
+          "title": "1월 급여 입금",
+          "amount": 3000000,
+          "method": "checkCard",
+          "category": "salary"
+        },
+        {
+          "id": 242,
+          "date": "2025.01.03",
+          "type": "income",
+          "title": "프리랜스 프로젝트 지급",
+          "amount": 500000,
+          "method": "cash",
+          "category": "salary"
+        }
+
+
+      ]
+    }
+  ],
+
+  "expend": [
+    {
+      "yearMonth": 2407,
+      "details": [
+        {
+          "id": 3,
+          "date": "2024.07.02",
+          "type": "expend",
+          "title": "직장 근처 식당 점심",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 4,
+          "date": "2024.07.03",
+          "type": "expend",
+          "title": "편의점 음료 및 간식 구매",
+          "amount": 8000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 5,
+          "date": "2024.07.04",
+          "type": "expend",
+          "title": "분식점 점심 식사",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 6,
+          "date": "2024.07.05",
+          "type": "expend",
+          "title": "마트에서 장보기",
+          "amount": 80000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 7,
+          "date": "2024.07.06",
+          "type": "expend",
+          "title": "친구 결혼식 축의금",
+          "amount": 300000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 8,
+          "date": "2024.07.07",
+          "type": "expend",
+          "title": "택시비 지출",
+          "amount": 25000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 9,
+          "date": "2024.07.08",
+          "type": "expend",
+          "title": "점심 도시락 구매",
+          "amount": 10000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 10,
+          "date": "2024.07.09",
+          "type": "expend",
+          "title": "백화점에서 여름 의류 구매",
+          "amount": 120000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 11,
+          "date": "2024.07.10",
+          "type": "expend",
+          "title": "지하철 충전",
+          "amount": 40000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 12,
+          "date": "2024.07.11",
+          "type": "expend",
+          "title": "저녁 외식 - 패밀리 레스토랑",
+          "amount": 45000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 13,
+          "date": "2024.07.12",
+          "type": "expend",
+          "title": "전기세 납부",
+          "amount": 90000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 14,
+          "date": "2024.07.13",
+          "type": "expend",
+          "title": "아동 학원비",
+          "amount": 200000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 15,
+          "date": "2024.07.14",
+          "type": "expend",
+          "title": "편의점 생필품 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 16,
+          "date": "2024.07.15",
+          "type": "expend",
+          "title": "수도세 납부",
+          "amount": 60000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 17,
+          "date": "2024.07.16",
+          "type": "expend",
+          "title": "카페에서 음료 구매",
+          "amount": 8000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 18,
+          "date": "2024.07.17",
+          "type": "expend",
+          "title": "중고 가구 구매",
+          "amount": 100000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 19,
+          "date": "2024.07.18",
+          "type": "expend",
+          "title": "택시비 지출",
+          "amount": 20000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 20,
+          "date": "2024.07.19",
+          "type": "expend",
+          "title": "점심 식사 - 분식집",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 21,
+          "date": "2024.07.20",
+          "type": "expend",
+          "title": "주유소에서 차량 연료비",
+          "amount": 80000,
+          "method": "creditCard",
+          "category": "transport"
+        },
+        {
+          "id": 22,
+          "date": "2024.07.21",
+          "type": "expend",
+          "title": "노점에서 간식 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 23,
+          "date": "2024.07.22",
+          "type": "expend",
+          "title": "생일 축하 선물 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 24,
+          "date": "2024.07.23",
+          "type": "expend",
+          "title": "마트에서 고기 구매",
+          "amount": 90000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 25,
+          "date": "2024.07.24",
+          "type": "expend",
+          "title": "야간 택시비",
+          "amount": 30000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 26,
+          "date": "2024.07.25",
+          "type": "expend",
+          "title": "카페에서 커피와 케이크",
+          "amount": 20000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 27,
+          "date": "2024.07.26",
+          "type": "expend",
+          "title": "저녁 외식 - 회전 초밥",
+          "amount": 45000,
+          "method": "checkCard",
+          "category": "food"
+        },
+        {
+          "id": 28,
+          "date": "2024.07.27",
+          "type": "expend",
+          "title": "부모님 병원비 지원",
+          "amount": 200000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 29,
+          "date": "2024.07.28",
+          "type": "expend",
+          "title": "편의점 생수 구매",
+          "amount": 8000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 30,
+          "date": "2024.07.29",
+          "type": "expend",
+          "title": "택배비",
+          "amount": 5000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 31,
+          "date": "2024.07.30",
+          "type": "expend",
+          "title": "음식 배달비",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 32,
+          "date": "2024.07.31",
+          "type": "expend",
+          "title": "맥주와 안주 구매",
+          "amount": 25000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 33,
+          "date": "2024.07.01",
+          "type": "expend",
+          "title": "청소 용품 구매",
+          "amount": 15000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 34,
+          "date": "2024.07.02",
+          "type": "expend",
+          "title": "자전거 정비 비용",
+          "amount": 50000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 35,
+          "date": "2024.07.03",
+          "type": "expend",
+          "title": "여름 이불 구매",
+          "amount": 80000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 36,
+          "date": "2024.07.04",
+          "type": "expend",
+          "title": "부모님 집 가스비 지원",
+          "amount": 60000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 37,
+          "date": "2024.07.05",
+          "type": "expend",
+          "title": "동네 마트에서 간식 구매",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 38,
+          "date": "2024.07.06",
+          "type": "expend",
+          "title": "여름 샌들 구매",
+          "amount": 30000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 39,
+          "date": "2024.07.07",
+          "type": "expend",
+          "title": "여름 휴가 기차비",
+          "amount": 70000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 40,
+          "date": "2024.07.08",
+          "type": "expend",
+          "title": "캠핑 장비 대여비",
+          "amount": 50000,
+          "method": "checkCard",
+          "category": "shopping"
+        }
+      ]
+    },
+    {
+      "yearMonth": 2408,
+      "details": [
+        {
+          "id": 43,
+          "date": "2024.08.02",
+          "type": "expend",
+          "title": "마트에서 과일과 야채 구매",
+          "amount": 45000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 44,
+          "date": "2024.08.03",
+          "type": "expend",
+          "title": "편의점 아이스크림 구매",
+          "amount": 10000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 45,
+          "date": "2024.08.04",
+          "type": "expend",
+          "title": "분식집에서 점심 식사",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 46,
+          "date": "2024.08.05",
+          "type": "expend",
+          "title": "전기세 납부",
+          "amount": 85000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 47,
+          "date": "2024.08.06",
+          "type": "expend",
+          "title": "지하철 충전",
+          "amount": 40000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 48,
+          "date": "2024.08.07",
+          "type": "expend",
+          "title": "택시비 지출",
+          "amount": 30000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 49,
+          "date": "2024.08.08",
+          "type": "expend",
+          "title": "백화점에서 여름 의류 구매",
+          "amount": 120000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 50,
+          "date": "2024.08.09",
+          "type": "expend",
+          "title": "친구 결혼식 축의금",
+          "amount": 200000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 51,
+          "date": "2024.08.10",
+          "type": "expend",
+          "title": "집 근처 카페 음료",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 52,
+          "date": "2024.08.11",
+          "type": "expend",
+          "title": "동네 식당 저녁 식사",
+          "amount": 20000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 53,
+          "date": "2024.08.12",
+          "type": "expend",
+          "title": "마트에서 고기 구매",
+          "amount": 90000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 54,
+          "date": "2024.08.13",
+          "type": "expend",
+          "title": "택시비 지출",
+          "amount": 25000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 55,
+          "date": "2024.08.14",
+          "type": "expend",
+          "title": "편의점 간식 구매",
+          "amount": 10000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 56,
+          "date": "2024.08.15",
+          "type": "expend",
+          "title": "수도세 납부",
+          "amount": 60000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 57,
+          "date": "2024.08.16",
+          "type": "expend",
+          "title": "고속도로 통행료",
+          "amount": 8000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 58,
+          "date": "2024.08.17",
+          "type": "expend",
+          "title": "저녁 외식 - 파스타 레스토랑",
+          "amount": 45000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 59,
+          "date": "2024.08.18",
+          "type": "expend",
+          "title": "중고 책 구매",
+          "amount": 20000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 60,
+          "date": "2024.08.19",
+          "type": "expend",
+          "title": "중고 가전제품 구매",
+          "amount": 150000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 61,
+          "date": "2024.08.20",
+          "type": "expend",
+          "title": "카페에서 커피와 케이크",
+          "amount": 20000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 62,
+          "date": "2024.08.21",
+          "type": "expend",
+          "title": "음식 배달비",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 63,
+          "date": "2024.08.22",
+          "type": "expend",
+          "title": "맥주와 안주 구매",
+          "amount": 25000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 64,
+          "date": "2024.08.23",
+          "type": "expend",
+          "title": "부모님 병원비 지원",
+          "amount": 150000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 65,
+          "date": "2024.08.24",
+          "type": "expend",
+          "title": "생일 축하 선물 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 66,
+          "date": "2024.08.25",
+          "type": "expend",
+          "title": "마라탕 외식",
+          "amount": 35000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 67,
+          "date": "2024.08.26",
+          "type": "expend",
+          "title": "노점에서 간식 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 68,
+          "date": "2024.08.27",
+          "type": "expend",
+          "title": "집안 청소 용품 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 69,
+          "date": "2024.08.28",
+          "type": "expend",
+          "title": "택배비",
+          "amount": 5000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 70,
+          "date": "2024.08.29",
+          "type": "expend",
+          "title": "부모님 생일 축의금",
+          "amount": 150000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 71,
+          "date": "2024.08.30",
+          "type": "expend",
+          "title": "여름 휴가 기차비",
+          "amount": 70000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 72,
+          "date": "2024.08.31",
+          "type": "expend",
+          "title": "캠핑 장비 대여비",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 73,
+          "date": "2024.08.15",
+          "type": "expend",
+          "title": "빨래방 이용 비용",
+          "amount": 10000,
+          "method": "cash",
+          "category": "utilityBills"
+        },
+        {
+          "id": 74,
+          "date": "2024.08.16",
+          "type": "expend",
+          "title": "마트에서 주방용품 구매",
+          "amount": 45000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 75,
+          "date": "2024.08.17",
+          "type": "expend",
+          "title": "점심 도시락 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 76,
+          "date": "2024.08.18",
+          "type": "expend",
+          "title": "수영장 이용권 구매",
+          "amount": 25000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 77,
+          "date": "2024.08.19",
+          "type": "expend",
+          "title": "스낵 및 음료 구매",
+          "amount": 8000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 78,
+          "date": "2024.08.20",
+          "type": "expend",
+          "title": "세차 비용",
+          "amount": 20000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 79,
+          "date": "2024.08.21",
+          "type": "expend",
+          "title": "동네 꽃집에서 작은 꽃다발 구매",
+          "amount": 15000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 80,
+          "date": "2024.08.22",
+          "type": "expend",
+          "title": "야간 산책 후 아이스크림",
+          "amount": 10000,
+          "method": "cash",
+          "category": "food"
+        }
+
+      ]
+    },
+    {
+      "yearMonth": 2409,
+      "details": [
+
+        {
+          "id": 82,
+          "date": "2024.09.05",
+          "type": "income",
+          "title": "프리랜스 프로젝트 지급",
+          "amount": 400000,
+          "method": "cash",
+          "category": "salary"
+        },
+        {
+          "id": 83,
+          "date": "2024.09.02",
+          "type": "expend",
+          "title": "마트에서 장보기",
+          "amount": 60000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 84,
+          "date": "2024.09.03",
+          "type": "expend",
+          "title": "동네 카페 커피 구매",
+          "amount": 10000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 85,
+          "date": "2024.09.04",
+          "type": "expend",
+          "title": "분식집에서 점심 식사",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 86,
+          "date": "2024.09.05",
+          "type": "expend",
+          "title": "전기세 납부",
+          "amount": 80000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 87,
+          "date": "2024.09.06",
+          "type": "expend",
+          "title": "지하철 충전",
+          "amount": 40000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 88,
+          "date": "2024.09.07",
+          "type": "expend",
+          "title": "택시비 지출",
+          "amount": 25000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 89,
+          "date": "2024.09.08",
+          "type": "expend",
+          "title": "의류 쇼핑",
+          "amount": 90000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 90,
+          "date": "2024.09.09",
+          "type": "expend",
+          "title": "친구 결혼식 축의금",
+          "amount": 150000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 91,
+          "date": "2024.09.10",
+          "type": "expend",
+          "title": "카페에서 브런치",
+          "amount": 20000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 92,
+          "date": "2024.09.11",
+          "type": "expend",
+          "title": "마트에서 고기와 생선 구매",
+          "amount": 95000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 93,
+          "date": "2024.09.12",
+          "type": "expend",
+          "title": "주유소에서 차량 연료비",
+          "amount": 70000,
+          "method": "creditCard",
+          "category": "transport"
+        },
+        {
+          "id": 94,
+          "date": "2024.09.13",
+          "type": "expend",
+          "title": "택배비 지불",
+          "amount": 5000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 95,
+          "date": "2024.09.14",
+          "type": "expend",
+          "title": "음식 배달비",
+          "amount": 18000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 96,
+          "date": "2024.09.15",
+          "type": "expend",
+          "title": "수도세 납부",
+          "amount": 60000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 97,
+          "date": "2024.09.16",
+          "type": "expend",
+          "title": "중고 책 구매",
+          "amount": 20000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 98,
+          "date": "2024.09.17",
+          "type": "expend",
+          "title": "동물병원 방문비",
+          "amount": 55000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 99,
+          "date": "2024.09.18",
+          "type": "expend",
+          "title": "저녁 외식 - 삼겹살",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 100,
+          "date": "2024.09.19",
+          "type": "expend",
+          "title": "스낵과 음료 구매",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 101,
+          "date": "2024.09.20",
+          "type": "expend",
+          "title": "꽃다발 구매",
+          "amount": 15000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 102,
+          "date": "2024.09.21",
+          "type": "expend",
+          "title": "편의점 생수 구매",
+          "amount": 8000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 103,
+          "date": "2024.09.22",
+          "type": "expend",
+          "title": "빨래방 이용 비용",
+          "amount": 10000,
+          "method": "cash",
+          "category": "utilityBills"
+        },
+        {
+          "id": 104,
+          "date": "2024.09.23",
+          "type": "expend",
+          "title": "캠핑 장비 대여비",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 105,
+          "date": "2024.09.24",
+          "type": "expend",
+          "title": "맥주와 안주 구매",
+          "amount": 25000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 106,
+          "date": "2024.09.25",
+          "type": "expend",
+          "title": "부모님 병원비 지원",
+          "amount": 120000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 107,
+          "date": "2024.09.26",
+          "type": "expend",
+          "title": "꽃집에서 작은 화분 구매",
+          "amount": 25000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 108,
+          "date": "2024.09.27",
+          "type": "expend",
+          "title": "세차 비용",
+          "amount": 20000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 109,
+          "date": "2024.09.28",
+          "type": "expend",
+          "title": "노점에서 간식 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 110,
+          "date": "2024.09.29",
+          "type": "expend",
+          "title": "카페에서 커피",
+          "amount": 8000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 111,
+          "date": "2024.09.30",
+          "type": "expend",
+          "title": "마트에서 생필품 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 112,
+          "date": "2024.09.10",
+          "type": "expend",
+          "title": "독서 모임 가입비",
+          "amount": 30000,
+          "method": "cash",
+          "category": "utilityBills"
+        }
+
+
+      ]
+    },
+    {
+      "yearMonth": 2410,
+      "details": [
+        {
+          "id": 123,
+          "date": "2024.10.02",
+          "type": "expend",
+          "title": "마트에서 채소와 과일 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 124,
+          "date": "2024.10.03",
+          "type": "expend",
+          "title": "분식점 떡볶이와 튀김",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 125,
+          "date": "2024.10.04",
+          "type": "expend",
+          "title": "전기세 납부",
+          "amount": 85000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 126,
+          "date": "2024.10.06",
+          "type": "expend",
+          "title": "지하철 충전",
+          "amount": 30000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 127,
+          "date": "2024.10.07",
+          "type": "expend",
+          "title": "택시비 지불",
+          "amount": 25000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 128,
+          "date": "2024.10.08",
+          "type": "expend",
+          "title": "백화점에서 코트 구매",
+          "amount": 150000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 129,
+          "date": "2024.10.09",
+          "type": "expend",
+          "title": "친구 결혼식 축의금",
+          "amount": 150000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 130,
+          "date": "2024.10.10",
+          "type": "expend",
+          "title": "카페에서 브런치",
+          "amount": 25000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 131,
+          "date": "2024.10.11",
+          "type": "expend",
+          "title": "마트에서 고기와 생선 구매",
+          "amount": 90000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 132,
+          "date": "2024.10.12",
+          "type": "expend",
+          "title": "주유소에서 차량 연료비",
+          "amount": 65000,
+          "method": "creditCard",
+          "category": "transport"
+        },
+        {
+          "id": 133,
+          "date": "2024.10.13",
+          "type": "expend",
+          "title": "택배비 결제",
+          "amount": 5000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 134,
+          "date": "2024.10.14",
+          "type": "expend",
+          "title": "음식 배달비",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 135,
+          "date": "2024.10.15",
+          "type": "expend",
+          "title": "수도세 납부",
+          "amount": 60000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 136,
+          "date": "2024.10.16",
+          "type": "expend",
+          "title": "중고 가구 구매",
+          "amount": 120000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 137,
+          "date": "2024.10.17",
+          "type": "expend",
+          "title": "아이들 학용품 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 138,
+          "date": "2024.10.18",
+          "type": "expend",
+          "title": "외식 - 한식당",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 139,
+          "date": "2024.10.19",
+          "type": "expend",
+          "title": "스낵과 음료 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 140,
+          "date": "2024.10.20",
+          "type": "expend",
+          "title": "꽃다발 구매",
+          "amount": 15000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 141,
+          "date": "2024.10.21",
+          "type": "expend",
+          "title": "청소 용품 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 142,
+          "date": "2024.10.22",
+          "type": "expend",
+          "title": "빨래방 이용 비용",
+          "amount": 10000,
+          "method": "cash",
+          "category": "utilityBills"
+        },
+        {
+          "id": 143,
+          "date": "2024.10.23",
+          "type": "expend",
+          "title": "캠핑 장비 대여비",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 144,
+          "date": "2024.10.24",
+          "type": "expend",
+          "title": "맥주와 안주 구매",
+          "amount": 20000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 145,
+          "date": "2024.10.25",
+          "type": "expend",
+          "title": "부모님 병원비 지원",
+          "amount": 150000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 146,
+          "date": "2024.10.26",
+          "type": "expend",
+          "title": "작은 화분 구매",
+          "amount": 20000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 147,
+          "date": "2024.10.27",
+          "type": "expend",
+          "title": "세차 비용",
+          "amount": 15000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 148,
+          "date": "2024.10.28",
+          "type": "expend",
+          "title": "아이스크림 구매",
+          "amount": 8000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 149,
+          "date": "2024.10.29",
+          "type": "expend",
+          "title": "마트에서 생필품 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 150,
+          "date": "2024.10.30",
+          "type": "expend",
+          "title": "독서 모임 가입비",
+          "amount": 30000,
+          "method": "cash",
+          "category": "utilityBills"
+        },
+
+        {"id": 151,
+          "date": "2024.10.31",
+          "type": "expend",
+          "title": "피트니스 센터 월 회원권",
+          "amount": 80000,
+          "method": "creditCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 152,
+          "date": "2024.10.29",
+          "type": "expend",
+          "title": "동네 시장에서 과일 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 153,
+          "date": "2024.10.27",
+          "type": "expend",
+          "title": "택배비 지불",
+          "amount": 5000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 154,
+          "date": "2024.10.25",
+          "type": "expend",
+          "title": "친구 생일 선물 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 155,
+          "date": "2024.10.28",
+          "type": "expend",
+          "title": "편의점 간식 구매",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 156,
+          "date": "2024.10.30",
+          "type": "expend",
+          "title": "고속도로 통행료",
+          "amount": 12000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 157,
+          "date": "2024.10.24",
+          "type": "expend",
+          "title": "마트에서 장보기",
+          "amount": 60000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 158,
+          "date": "2024.10.26",
+          "type": "expend",
+          "title": "집안 청소용품 구매",
+          "amount": 35000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 159,
+          "date": "2024.10.31",
+          "type": "expend",
+          "title": "아이들과 놀이공원 방문",
+          "amount": 80000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 160,
+          "date": "2024.10.30",
+          "type": "expend",
+          "title": "친구와 저녁 식사",
+          "amount": 45000,
+          "method": "creditCard"
+        }
+
+      ]
+    },
+    {
+      "yearMonth": 2411,
+      "details": [
+        {
+          "id": 163,
+          "date": "2024.11.02",
+          "type": "expend",
+          "title": "마트에서 장보기",
+          "amount": 55000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 164,
+          "date": "2024.11.03",
+          "type": "expend",
+          "title": "편의점 간식 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 165,
+          "date": "2024.11.04",
+          "type": "expend",
+          "title": "전기세 납부",
+          "amount": 82000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 166,
+          "date": "2024.11.06",
+          "type": "expend",
+          "title": "지하철 충전",
+          "amount": 40000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 167,
+          "date": "2024.11.07",
+          "type": "expend",
+          "title": "택시비 지출",
+          "amount": 25000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 168,
+          "date": "2024.11.08",
+          "type": "expend",
+          "title": "백화점에서 겨울 의류 구매",
+          "amount": 150000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 169,
+          "date": "2024.11.09",
+          "type": "expend",
+          "title": "친구 결혼식 축의금",
+          "amount": 200000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 170,
+          "date": "2024.11.10",
+          "type": "expend",
+          "title": "카페에서 브런치",
+          "amount": 20000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 171,
+          "date": "2024.11.11",
+          "type": "expend",
+          "title": "마트에서 고기와 채소 구매",
+          "amount": 80000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 172,
+          "date": "2024.11.12",
+          "type": "expend",
+          "title": "주유소 차량 연료비",
+          "amount": 70000,
+          "method": "creditCard",
+          "category": "transport"
+        },
+        {
+          "id": 173,
+          "date": "2024.11.13",
+          "type": "expend",
+          "title": "택배비 결제",
+          "amount": 5000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 174,
+          "date": "2024.11.14",
+          "type": "expend",
+          "title": "음식 배달비",
+          "amount": 18000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 175,
+          "date": "2024.11.15",
+          "type": "expend",
+          "title": "수도세 납부",
+          "amount": 60000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 176,
+          "date": "2024.11.16",
+          "type": "expend",
+          "title": "중고 가구 구매",
+          "amount": 120000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 177,
+          "date": "2024.11.17",
+          "type": "expend",
+          "title": "아이들 학용품 구매",
+          "amount": 40000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 178,
+          "date": "2024.11.18",
+          "type": "expend",
+          "title": "저녁 외식 - 고깃집",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 179,
+          "date": "2024.11.19",
+          "type": "expend",
+          "title": "스낵과 음료 구매",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 180,
+          "date": "2024.11.20",
+          "type": "expend",
+          "title": "꽃다발 구매",
+          "amount": 20000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 181,
+          "date": "2024.11.21",
+          "type": "expend",
+          "title": "빨래방 이용 비용",
+          "amount": 15000,
+          "method": "cash",
+          "category": "utilityBills"
+        },
+        {
+          "id": 182,
+          "date": "2024.11.22",
+          "type": "expend",
+          "title": "맥주와 안주 구매",
+          "amount": 25000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 183,
+          "date": "2024.11.23",
+          "type": "expend",
+          "title": "부모님 병원비 지원",
+          "amount": 150000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 184,
+          "date": "2024.11.24",
+          "type": "expend",
+          "title": "청소 용품 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 185,
+          "date": "2024.11.25",
+          "type": "expend",
+          "title": "세차 비용",
+          "amount": 20000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 186,
+          "date": "2024.11.26",
+          "type": "expend",
+          "title": "노점에서 간식 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 187,
+          "date": "2024.11.27",
+          "type": "expend",
+          "title": "아이들과 놀이공원 방문",
+          "amount": 80000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 188,
+          "date": "2024.11.28",
+          "type": "expend",
+          "title": "친구 생일 선물 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 189,
+          "date": "2024.11.29",
+          "type": "expend",
+          "title": "고속도로 통행료",
+          "amount": 12000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 190,
+          "date": "2024.11.30",
+          "type": "expend",
+          "title": "마트에서 장보기",
+          "amount": 60000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 191,
+          "date": "2024.11.15",
+          "type": "expend",
+          "title": "병원비 지불",
+          "amount": 100000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 192,
+          "date": "2024.11.11",
+          "type": "expend",
+          "title": "책 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 193,
+          "date": "2024.11.19",
+          "type": "expend",
+          "title": "음료수 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 194,
+          "date": "2024.11.16",
+          "type": "expend",
+          "title": "간단한 외식",
+          "amount": 25000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 195,
+          "date": "2024.11.20",
+          "type": "expend",
+          "title": "캠핑 장비 대여비",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 196,
+          "date": "2024.11.25",
+          "type": "expend",
+          "title": "스낵과 음료 구매",
+          "amount": 10000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 197,
+          "date": "2024.11.30",
+          "type": "expend",
+          "title": "꽃다발 구매",
+          "amount": 20000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 198,
+          "date": "2024.11.28",
+          "type": "expend",
+          "title": "스파 이용권 구매",
+          "amount": 70000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 199,
+          "date": "2024.11.29",
+          "type": "expend",
+          "title": "마트에서 생필품 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 200,
+          "date": "2024.11.30",
+          "type": "expend",
+          "title": "맥주 구매",
+          "amount": 10000,
+          "method": "cash"
+        }
+
+
+      ]
+    },
+    {
+      "yearMonth": 2412,
+      "details": [
+        {
+          "id": 203,
+          "date": "2024.12.02",
+          "type": "expend",
+          "title": "마트에서 장보기",
+          "amount": 70000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 204,
+          "date": "2024.12.03",
+          "type": "expend",
+          "title": "분식점 떡볶이와 튀김",
+          "amount": 18000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 205,
+          "date": "2024.12.04",
+          "type": "expend",
+          "title": "전기세 납부",
+          "amount": 95000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 206,
+          "date": "2024.12.06",
+          "type": "expend",
+          "title": "지하철 충전",
+          "amount": 45000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 207,
+          "date": "2024.12.07",
+          "type": "expend",
+          "title": "택시비 지불",
+          "amount": 30000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 208,
+          "date": "2024.12.08",
+          "type": "expend",
+          "title": "백화점에서 코트 구매",
+          "amount": 200000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 209,
+          "date": "2024.12.09",
+          "type": "expend",
+          "title": "친구 결혼식 축의금",
+          "amount": 200000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 210,
+          "date": "2024.12.10",
+          "type": "expend",
+          "title": "카페에서 브런치",
+          "amount": 25000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 211,
+          "date": "2024.12.11",
+          "type": "expend",
+          "title": "마트에서 고기와 채소 구매",
+          "amount": 85000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 212,
+          "date": "2024.12.12",
+          "type": "expend",
+          "title": "주유소 차량 연료비",
+          "amount": 70000,
+          "method": "creditCard",
+          "category": "transport"
+        },
+        {
+          "id": 213,
+          "date": "2024.12.13",
+          "type": "expend",
+          "title": "택배비 결제",
+          "amount": 5000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 214,
+          "date": "2024.12.14",
+          "type": "expend",
+          "title": "음식 배달비",
+          "amount": 20000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 215,
+          "date": "2024.12.15",
+          "type": "expend",
+          "title": "수도세 납부",
+          "amount": 62000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 216,
+          "date": "2024.12.16",
+          "type": "expend",
+          "title": "중고 가구 구매",
+          "amount": 150000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 217,
+          "date": "2024.12.17",
+          "type": "expend",
+          "title": "아이들 학용품 구매",
+          "amount": 35000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 218,
+          "date": "2024.12.18",
+          "type": "expend",
+          "title": "저녁 외식 - 고깃집",
+          "amount": 55000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 219,
+          "date": "2024.12.19",
+          "type": "expend",
+          "title": "스낵과 음료 구매",
+          "amount": 12000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 220,
+          "date": "2024.12.20",
+          "type": "expend",
+          "title": "크리스마스 장식 구매",
+          "amount": 100000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 221,
+          "date": "2024.12.21",
+          "type": "expend",
+          "title": "빨래방 이용 비용",
+          "amount": 15000,
+          "method": "cash",
+          "category": "utilityBills"
+        },
+        {
+          "id": 222,
+          "date": "2024.12.22",
+          "type": "expend",
+          "title": "맥주와 안주 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 223,
+          "date": "2024.12.23",
+          "type": "expend",
+          "title": "부모님 병원비 지원",
+          "amount": 150000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 224,
+          "date": "2024.12.24",
+          "type": "expend",
+          "title": "청소 용품 구매",
+          "amount": 40000,
+          "method": "cash",
+          "category": "shopping"
+        },
+        {
+          "id": 225,
+          "date": "2024.12.25",
+          "type": "expend",
+          "title": "가족 크리스마스 저녁 식사",
+          "amount": 100000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 226,
+          "date": "2024.12.26",
+          "type": "expend",
+          "title": "놀이공원 입장료",
+          "amount": 120000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 227,
+          "date": "2024.12.27",
+          "type": "expend",
+          "title": "아이들 새해 학용품 구매",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 228,
+          "date": "2024.12.28",
+          "type": "expend",
+          "title": "마트에서 생필품 구매",
+          "amount": 60000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 229,
+          "date": "2024.12.29",
+          "type": "expend",
+          "title": "병원 진료비 지불",
+          "amount": 80000,
+          "method": "checkCard",
+          "category": "utilityBills"
+        },
+        {
+          "id": 230,
+          "date": "2024.12.30",
+          "type": "expend",
+          "title": "새해를 위한 화장품 구매",
+          "amount": 100000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 231,
+          "date": "2024.12.31",
+          "type": "expend",
+          "title": "친구와 저녁 외식",
+          "amount": 50000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 232,
+          "date": "2024.12.31",
+          "type": "expend",
+          "title": "새해맞이 꽃 구매",
+          "amount": 30000,
+          "method": "cash",
+          "category": "shopping"
+        }
+
+      ]
+    },
+    {
+      "yearMonth": 2501,
+      "details": [
+        {
+          "id": 243,
+          "date": "2025.01.01",
+          "type": "expend",
+          "title": "마트에서 신년 장보기",
+          "amount": 75000,
+          "method": "creditCard",
+          "category": "food"
+        },
+        {
+          "id": 244,
+          "date": "2025.01.02",
+          "type": "expend",
+          "title": "친구 신년회 축의금",
+          "amount": 100000,
+          "method": "checkCard",
+          "category": "congratulation"
+        },
+        {
+          "id": 245,
+          "date": "2025.01.03",
+          "type": "expend",
+          "title": "새해맞이 카페 방문",
+          "amount": 20000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 246,
+          "date": "2025.01.04",
+          "type": "expend",
+          "title": "주유소 차량 연료비",
+          "amount": 85000,
+          "method": "creditCard",
+          "category": "transport"
+        },
+        {
+          "id": 247,
+          "date": "2025.01.05",
+          "type": "expend",
+          "title": "음식 배달비",
+          "amount": 25000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 248,
+          "date": "2025.01.06",
+          "type": "expend",
+          "title": "마트에서 간식 구매",
+          "amount": 15000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 249,
+          "date": "2025.01.07",
+          "type": "expend",
+          "title": "신년 맞이 화장품 구매",
+          "amount": 120000,
+          "method": "creditCard",
+          "category": "shopping"
+        },
+        {
+          "id": 250,
+          "date": "2025.01.08",
+          "type": "expend",
+          "title": "택시비 지불",
+          "amount": 30000,
+          "method": "cash",
+          "category": "transport"
+        },
+        {
+          "id": 251,
+          "date": "2025.01.08",
+          "type": "expend",
+          "title": "빨래방 이용 비용",
+          "amount": 15000,
+          "method": "cash",
+          "category": "utilityBills"
+        },
+        {
+          "id": 252,
+          "date": "2025.01.09",
+          "type": "expend",
+          "title": "아이스크림 구매",
+          "amount": 8000,
+          "method": "cash",
+          "category": "food"
+        },
+        {
+          "id": 253,
+          "date": "2025.01.09",
+          "type": "expend",
+          "title": "꽃다발 구매",
+          "amount": 25000,
+          "method": "cash",
+          "category": "shopping"
+        }
+
+      ]
+    }
+
+  ]
+}
