@@ -18,18 +18,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     };
 
-    // sampleDataDivision.json 데이터 반환
-    await getSampleData();
-    console.log(sampleData);
-
     /**
-     * 월별 수입 총 합계 계산 함수
+     * 월별 수입/지출 총 합계 계산 함수
      * - 기준 날짜 범위에 해당하는 데이터만 계산
      * - 금액 형태로 반환 (ex. 1,000원)
      */
-    const getIncomeAmount = (year, month) => {
+    const getTotalAmount = (year, month) => {
         try {
             let incomeAmount = 0;
+            let expendAmount = 0;
 
             // 기준 날짜 범위에 해당하는 데이터만 계산
             sampleData.income.forEach(data => {
@@ -43,10 +40,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                     });
                 }
             });
+
+            sampleData.expend.forEach(data => {
+                const dataDate = String(data.yearMonth);
+                const dataYear = dataDate.slice(0, 2);
+                const dataMonth = dataDate.slice(2, 4);
+
+                if (dataYear === year && dataMonth === month) {
+                    data.details.forEach(detail => {
+                        expendAmount += detail.amount;
+                    });
+                }
+            });
+
             console.log(`year: ${year}, month: ${month}, incomeAmount: ${incomeAmount}`);
 
             // 금액 형태로 반환
             totalIncomeAmount.textContent = `${incomeAmount.toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원`;
+            totalExpendAmount.textContent = `${expendAmount.toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원`;
         } catch(error) {
             console.error(error);
@@ -58,15 +70,19 @@ document.addEventListener('DOMContentLoaded', async () => {
      * - 현재 날짜 기준으로 총 수입/지출 금액 계산
      */
      try {
-        const nowDateValue = nowDate.textContent;
-        const nowDateValueArr = nowDateValue.split('.');
-        const nowYear = nowDateValueArr[0];
-        const nowMonth = nowDateValueArr[1];
+         const nowDateValue = nowDate.textContent;
+         const nowDateValueArr = nowDateValue.split('.');
+         const nowYear = nowDateValueArr[0];
+         const nowMonth = nowDateValueArr[1];
 
-        // 총 수입 금액 계산
-        const getIncomeAmountYear = String(nowYear).slice(2,4);
-        const getIncomeAmountMonth = nowMonth < 10 ? '0' + nowMonth : nowMonth;
-        getIncomeAmount(getIncomeAmountYear, getIncomeAmountMonth);
+         // sampleDataDivision.json 데이터 반환
+         await getSampleData();
+         console.log(sampleData);
+
+         // 총 수입 금액 계산
+         const getIncomeAmountYear = String(nowYear).slice(2,4);
+         const getIncomeAmountMonth = nowMonth < 10 ? '0' + nowMonth : nowMonth;
+         getTotalAmount(getIncomeAmountYear, getIncomeAmountMonth);
      } catch (error) {
             console.error(error);
      }
@@ -93,15 +109,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             const prevYear = prevDate.getFullYear();
             const prevMonth = prevDate.getMonth() + 1;
 
+            // 날짜 변경
             nowDate.textContent = `${prevYear}.${prevMonth < 10 ? '0' + prevMonth : prevMonth}`;
             Array.from(nowMonthClass).forEach(month => {
                 month.textContent = `${prevMonth}`;
             });
 
-            // 총 수입 금액 계산
+            // 총 수입/지출 금액 계산
             const getIncomeAmountYear = String(prevYear).slice(2,4);
             const getIncomeAmountMonth = prevMonth < 10 ? '0' + prevMonth : prevMonth;
-            getIncomeAmount(getIncomeAmountYear, getIncomeAmountMonth);
+            getTotalAmount(getIncomeAmountYear, getIncomeAmountMonth);
         });
 
         nextDateBtn.addEventListener('click', () => {
@@ -118,15 +135,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             const nextYear = nextDate.getFullYear();
             const nextMonth = nextDate.getMonth() + 1;
 
+            // 날짜 변경
             nowDate.textContent = `${nextYear}.${nextMonth < 10 ? '0' + nextMonth : nextMonth}`;
             Array.from(nowMonthClass).forEach(month => {
                 month.textContent = `${nextMonth}`;
             });
 
-            // 총 수입 금액 계산
+            // 총 수입/지출 금액 계산
             const getIncomeAmountYear = String(nextYear).slice(2,4);
-            const getIncomeAmountMonth = nextMonth < 10 ? '0' + prevMonth : prevMonth;
-            getIncomeAmount(getIncomeAmountYear, getIncomeAmountMonth);
+            const getIncomeAmountMonth = nextMonth < 10 ? '0' + nextMonth : nextMonth;
+            getTotalAmount(getIncomeAmountYear, getIncomeAmountMonth);
         });
     } catch (error) {
         console.error(error);
