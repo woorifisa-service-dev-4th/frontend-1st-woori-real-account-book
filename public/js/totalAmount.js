@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /**
      * 날짜 이동 버튼 클릭 이벤트
      * - 현재 날짜 이상으로는 이동되지 않는다
-     * - 이동 가능 날짜: 2024.07.01 ~ 2025.01
+     * - 이동 가능 날짜: 2024.08.01 ~ 2025.01
      * - 월단위 이동 (ex. 2024.01 -> 2024.02)
      */
     try {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const nowYear = nowDateValueArr[0];
             const nowMonth = nowDateValueArr[1];
 
-            if (nowYear === '2024' && nowMonth === '07') {
+            if (nowYear === '2024' && nowMonth === '08') {
                 return;
             }
 
