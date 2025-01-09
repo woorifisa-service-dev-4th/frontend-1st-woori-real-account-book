@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우리REAL가계부</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="images/favicon.png">
-    <link rel="icon" href="/public/images/favicon.png">
+    <script src="../js/totalAmount.js" defer></script>
+    <script src="../js/totalDetail.js" defer></script>
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
     <script>
         tailwind.config = {
             theme: {
@@ -27,22 +29,22 @@
         <div class="flex flex-col items-center gap-14 w-full">
             <div class="flex flex-row justify-between w-full items-end h-[78px]">
                 <div class="flex flex-row items-center gap-2">
-                    <img src="images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
+                    <img src="../images/user-profile-default.png" alt="user profile" class="w-[30px] h-[30px]">
                     <p class="weight-600">홍길동님</p>
                 </div>
 
                 <div class="absolute top-[50px] left-1/2 transform -translate-x-1/2 text-center">
                     <h1 class="dark-mode-light-gray text-[#3C3C3C] text-[16px] weight-600">우리 REAL 가계부</h1>
                     <div class="flex flex-row items-center justify-center gap-2">
-                        <img src="images/vector-left-gray-icon.png" alt="left icon" class="w-[22px]" />
+                        <img src="../images/vector-left-gray-icon.png" alt="left icon" class="w-[22px]" />
                         <p class="weight-600 text-[36px]">2025.01</p>
-                        <img src="images/vector-right-gray-icon.png" alt="right icon" class="w-[22px]" />
+                        <img src="../images/vector-right-gray-icon.png" alt="right icon" class="w-[22px]" />
                     </div>
                 </div>
 
                 <div class="flex flex-col items-end h-full justify-between">
-                    <img id="nightMode" src="images/night-mode-btn.png" alt="night mode" class="w-[30px] h-[30px]">
-                    <img id="dayMode" src="images/day-mode-btn.png" alt="day mode" class="w-[30px] h-[30px] hidden">
+                    <img id="nightMode" src="../images/night-mode-btn.png" alt="night mode" class="w-[30px] h-[30px]">
+                    <img id="dayMode" src="../images/day-mode-btn.png" alt="day mode" class="w-[30px] h-[30px] hidden">
                     <div class="flex flex-row gap-2">
                         <button class="hover:bg-[#506CFF] hover:text-white rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]"
                                 onclick="location.href='category-analysis.html'">
