@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const detailContentsDiv = document.getElementById('detailContentsDiv');
 
     let sampleData;
-
     // sampleDataDivision.json 데이터 반환 함수
     const getSampleData = async () => {
         try {
