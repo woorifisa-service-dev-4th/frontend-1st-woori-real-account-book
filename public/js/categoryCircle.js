@@ -1,6 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // 데이터 배열 (JSON 응답에서 가져온다고 가정)
-    const data = {
+    let sampleData;
+
+    // sampleDataDivision.json 데이터 반환 함수
+    const getSampleData = async () => {
+        try {
+            const response = await fetch('../json/sampleMonthlyData.json');
+            sampleData = await response.json();
+            console.log(sampleData);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    // sampleDataDivision.json 데이터 반환
+    await getSampleData();
+    /*const data = {
         expend: [
             {
                 yearMonth: 2407,
@@ -18,15 +33,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
+    */
+
 
     // 1. "expend" 데이터 가져오기
-    const allExpendDetails = data.expend.flatMap(item => item.details);
+    const allExpendDetails = sampleData.expend.flatMap(item => item.details);
 
     // 2. 카테고리별 합계 계산
-    const categorySums = allExpendDetails.reduce((acc, curr) => {
-        acc[curr.category] = (acc[curr.category] || 0) + curr.amount;
-        return acc;
-    }, {});
+    // 2. 카테고리별 합계 계산 (undefined 제외)
+    const categorySums = allExpendDetails
+        .filter(item => {
+            // 현재 월 계산
+            const currentMonth = new Date().toISOString().slice(0, 7); // YYYY-MM 형식
+            const itemMonth = item.date.slice(0, 7); // YYYY.MM 형식에서 월 추출
+            return item.type === "expend" && item.category && itemMonth === currentMonth.replace("-", ".");
+        })
+        .reduce((acc, item) => {
+            acc[item.category] = (acc[item.category] || 0) + item.amount;
+            return acc;
+        }, {});
+
 
     // 3. 총합 계산
     const totalExpenditure = Object.values(categorySums).reduce((acc, curr) => acc + curr, 0);

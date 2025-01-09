@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script type="module" src="../js/signup.js" defer></script>
+    <script type="module" src="../js/login.js" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -42,39 +43,43 @@
                     <div class="flex flex-col gap-1">
                         <p class="weight-500">이름</p>
                         <label>
-                            <input type="text" placeholder="이름을 입력해주세요"
+                            <input id="nameInput" type="text" placeholder="이름을 입력해주세요"
                                    class="border border-[#929292] rounded-[8px] w-full h-[45px] px-[10px] py-[5px] text-[14px]">
                         </label>
+                        <p id="nameGuideMessage" class="text-red-600 weight-500 text-[12px] pl-1 hidden">이름은 2자 이상 입력해주세요</p>
                     </div>
 
                     <div class="flex flex-col gap-1">
                         <p class="weight-500">아이디</p>
                         <label>
-                            <input type="text" placeholder="아이디를 입력해주세요"
+                            <input id="idInput" type="text" placeholder="아이디를 입력해주세요"
                                    class="border border-[#929292] rounded-[8px] w-full h-[45px] px-[10px] py-[5px] text-[14px]">
                         </label>
+                        <p id="idGuideMessage" class="text-red-600 weight-500 text-[12px] pl-1 hidden">아이디는 4자 이상 입력해주세요</p>
                     </div>
 
                     <div class="flex flex-col gap-1">
                         <p class="weight-500">비밀번호</p>
                         <label>
-                            <input type="password" placeholder="비밀번호를 입력해주세요"
+                            <input id="pwInput" type="password" placeholder="비밀번호를 입력해주세요"
                                    class="border border-[#929292] rounded-[8px] w-full h-[45px] px-[10px] py-[5px] text-[14px]">
                         </label>
+                        <p id="pwGuideMessage" class="text-red-600 weight-500 text-[12px] pl-1 hidden">비밀번호는 8자 이상 입력해주세요</p>
                     </div>
 
                     <div class="flex flex-col gap-1">
                         <p class="weight-500">비밀번호 확인</p>
                         <label>
-                            <input type="password" placeholder="비밀번호를 다시 한번 입력해주세요"
+                            <input id="pwCheckInput" type="password" placeholder="비밀번호를 다시 한번 입력해주세요"
                                    class="border border-[#929292] rounded-[8px] w-full h-[45px] px-[10px] py-[5px] text-[14px]">
                         </label>
+                        <p id="pwCheckGuideMessage" class="text-red-600 weight-500 text-[12px] pl-1 hidden">비밀번호가 일치하지 않습니다</p>
                     </div>
                 </div>
 
                 <div class="flex flex-col gap-1.5">
-                    <button class="hover:bg-[#3757ff] w-full rounded-[8px] bg-[#506CFF] text-white weight-500 w-[200px] py-3"
-                            onclick="location.href='main.html'">
+                    <button id="signupBtn" class="w-full rounded-[8px] bg-[#b6b6b6] text-white weight-500 w-[200px] py-3"
+                            onclick="location.href='login.html'">
                         가입
                     </button>
 
