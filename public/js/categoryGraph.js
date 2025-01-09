@@ -1,57 +1,12 @@
 document.addEventListener('DOMContentLoaded', async () => {
-
     const buttons = document.querySelectorAll('button');
     const defaultColor = 'bg-[#EEEEEE]';
     const activeColor = 'bg-[#506CFF]';
     const activeTextColor = 'text-white';
 
-    document.getElementById("food").addEventListener("click", () => {
-        updateWeeklyDataDisplay("food");
-    });
+    let data;
 
-    document.getElementById("shopping").addEventListener("click", () => {
-        updateWeeklyDataDisplay("shopping");
-    });
-
-    document.getElementById("transport").addEventListener("click", () => {
-        updateWeeklyDataDisplay("transport");
-    });
-
-    document.getElementById("events").addEventListener("click", () => {
-        updateWeeklyDataDisplay("events");
-    });
-
-
-    function calculateCategoryWeeklySums(sampleData, category) {
-        const weeklySums = {}; // 주별 합계를 저장할 객체
-
-        sampleData.forEach((item) => {
-            if (item.category === category) {
-                // 항목이 주어진 카테고리와 일치할 경우
-                const weekStart = getWeekStart(item.date);
-                // 해당 항목의 날짜가 속한 주의 시작일 계산
-
-                if (!weeklySums[weekStart]) {
-                    // 해당 주의 합계가 아직 초기화되지 않았으면 0으로 초기화
-                    weeklySums[weekStart] = 0;
-                }
-
-                weeklySums[weekStart] += item.amount;
-                // 해당 주의 합계에 금액 추가
-            }
-        });
-
-        return weeklySums; // 주별 합계를 반환
-    }
-
-
-
-
-
-
-    let sampleData;
-
-    // sampleDataDivision.json 데이터 반환 함수
+    // sampleData.json 데이터를 가져오기
     const getSampleData = async () => {
         try {
             const response = await fetch('../json/sampleData.json');
@@ -61,17 +16,88 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     };
 
-    // sampleDataDivision.json 데이터 반환
-    await getSampleData();
-    // console.log(sampleData);
+    await getSampleData(); // 데이터 로드
 
-    // filterDataByCategory 함수 외부로 이동
-    function filterDataByCategory(category, sampleData) {
-        const filteredData = sampleData.filter(item => item.category === category && item.type === 'expend'); // category와 type이 'expend'인 항목 필터링
-        console.log(filteredData); // 필터링된 데이터 출력
-        displayFilteredData(filteredData); // 주차별 합계 계산 함수 호출
+    // 현재 월의 데이터를 필터링
+    function getCurrentMonthData(data) {
+        const now = new Date(); // 현재 날짜
+        const currentYear = now.getFullYear();
+        const currentMonth = now.getMonth(); // 0부터 시작 (1월: 0, 2월: 1, ...)
+
+        return data.filter(item => {
+            const itemDate = new Date(item.date);
+            return (
+                itemDate.getFullYear() === currentYear &&
+                itemDate.getMonth() === currentMonth
+            );
+        });
     }
-    // 각 버튼에 클릭 이벤트 리스너 추가
+
+    // 특정 달 기준 주차 계산
+    function getMonthWeekNumber(dateString) {
+        const date = new Date(dateString);
+        const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+        const dayOfWeek = firstDayOfMonth.getDay();
+        const dayOfMonth = date.getDate();
+        return Math.ceil((dayOfMonth + dayOfWeek) / 7);
+    }
+
+    // 주차별 합계 계산
+    function calculateWeeklySums(filteredData) {
+        const weeklySums = {};
+
+        filteredData.forEach(item => {
+            const weekNumber = getMonthWeekNumber(item.date);
+            if (!weeklySums[weekNumber]) {
+                weeklySums[weekNumber] = 0;
+            }
+            weeklySums[weekNumber] += item.amount; // 주차별 금액 합산
+        });
+
+        return weeklySums; // 주차별 합계 반환
+    }
+
+    // UI 업데이트
+    function updateWeeklyDataDisplay(category) {
+        const currentMonthData = getCurrentMonthData(sampleData);
+        const filteredData = currentMonthData.filter(item => item.category === category && item.type === 'expend');
+        const weeklySums = calculateWeeklySums(filteredData);
+
+        const weekContainers = document.querySelector('.flex-row.justify-center.gap-6');
+        weekContainers.innerHTML = ''; // 기존 내용을 비움
+
+        const maxBarHeight = 130; // 최대 막대 높이
+        const maxAmount = Math.max(...Object.values(weeklySums), 0); // 최대 값 계산
+
+        for (let week = 1; week <= 5; week++) {
+            const amount = weeklySums[week] || 0;
+            const barHeight = amount > 0 ? (amount / maxAmount) * maxBarHeight : 6;
+
+            const weekContainer = document.createElement('div');
+            weekContainer.className = 'flex flex-col items-center gap-1';
+
+            const amountText = document.createElement('p');
+            amountText.className = amount > 0 ? 'text-[#506CFF] text-[14px] weight-600' : 'text-[14px] weight-500';
+            amountText.textContent = `${amount.toLocaleString()} 원`;
+
+            const bar = document.createElement('div');
+            bar.style.height = `${barHeight}px`;
+            bar.className = 'h-[20px] w-[35px] rounded-[4px]';
+            bar.style.backgroundColor = amount > 0 ? '#506CFF' : '#B6B6B6';
+
+            const weekText = document.createElement('p');
+            weekText.className = 'weight-500 text-[14px]';
+            weekText.textContent = `${new Date().getMonth() + 1}월 ${week}째주`;
+
+            weekContainers.appendChild(weekContainer);
+            weekContainer.appendChild(amountText);
+            weekContainer.appendChild(bar);
+            weekContainer.appendChild(weekText);
+        }
+
+    }
+
+    // 버튼 클릭 이벤트 리스너
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             buttons.forEach(btn => {
@@ -81,51 +107,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             button.classList.remove(defaultColor);
             button.classList.add(activeColor, activeTextColor);
 
-            const category = button.id;
-            filterDataByCategory(category, sampleData);
+            const category = button.id; // 버튼의 id가 카테고리 이름
+            updateWeeklyDataDisplay(category); // UI 업데이트
         });
     });
 
-    // 주차별 합계 계산
-    function calculateWeeklySums(filteredData) {
-        // 주차별 합계 초기화
-        const weeklySums = {};
-
-        filteredData.forEach(item => {
-            const weekNumber = getWeekNumber(item.date); // 주차 계산
-            if (!weeklySums[weekNumber]) {
-                weeklySums[weekNumber] = 0;
-            }
-            weeklySums[weekNumber] += item.amount; // 해당 주차의 합계 계산
-        });
-
-        // 주차별 합계 출력
-        console.log(weeklySums);
-    }
-
-    // 주차 계산 함수 (1일부터 시작하는 기준)
-    function getWeekNumber(dateString) {
-        const date = new Date(dateString);
-        const startOfYear = new Date(date.getFullYear(), 0, 1);
-        const days = Math.floor((date - startOfYear) / (24 * 60 * 60 * 1000));
-        return Math.ceil((days + startOfYear.getDay() + 1) / 7);
-    }
-
-    // displayFilteredData 함수 정의
-    function displayFilteredData(filteredData) {
-        // 필터링된 데이터를 HTML로 출력하는 예시
-        const resultDiv = document.getElementById('result'); // 결과를 출력할 div
-        if (!resultDiv) {
-            console.error("결과를 출력할 div 요소가 존재하지 않습니다.");
-            return; // 요소가 없다면 처리하지 않고 종료
-        }
-        resultDiv.innerHTML = ''; // 기존 내용을 비움
-
-        filteredData.forEach(item => {
-            const itemDiv = document.createElement('div');
-            itemDiv.classList.add('filtered-item');
-            itemDiv.innerText = `${item.date} - ${item.amount} - ${item.category}`;
-            resultDiv.appendChild(itemDiv);
-        });
-    }
+    // 페이지 로드 시 기본 카테고리 표시
+    updateWeeklyDataDisplay('food'); // 기본값: 식비
 });
