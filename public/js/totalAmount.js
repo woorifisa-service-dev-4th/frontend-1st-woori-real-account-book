@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevDateBtn = document.getElementById('prevDateBtn');
     const nextDateBtn = document.getElementById('nextDateBtn');
     const nowDate = document.getElementById('nowDate');
+    const nowMonthClass = document.getElementsByClassName('nowMonth');
 
     /**
      * 날짜 이동 버튼 클릭 이벤트
@@ -25,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const prevMonth = prevDate.getMonth() + 1;
 
             nowDate.textContent = `${prevYear}.${prevMonth < 10 ? '0' + prevMonth : prevMonth}`;
+            Array.from(nowMonthClass).forEach(month => {
+                month.textContent = `${prevMonth}`;
+            });
         });
 
         nextDateBtn.addEventListener('click', () => {
@@ -42,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const nextMonth = nextDate.getMonth() + 1;
 
             nowDate.textContent = `${nextYear}.${nextMonth < 10 ? '0' + nextMonth : nextMonth}`;
+            Array.from(nowMonthClass).forEach(month => {
+                month.textContent = `${nextMonth}`;
+            });
         });
     } catch (error) {
         console.error(error);
