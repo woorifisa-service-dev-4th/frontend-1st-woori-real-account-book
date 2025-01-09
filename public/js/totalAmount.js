@@ -1,8 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const prevDateBtn = document.getElementById('prevDateBtn');
     const nextDateBtn = document.getElementById('nextDateBtn');
     const nowDate = document.getElementById('nowDate');
     const nowMonthClass = document.getElementsByClassName('nowMonth');
+
+    let sampleData;
+
+    // sampleDataDivision.json 데이터 반환 함수
+    const getSampleData = async () => {
+        try {
+            const response = await fetch('../json/sampleDataDivision.json');
+            sampleData = await response.json();
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    // sampleDataDivision.json 데이터 반환
+    await getSampleData();
+    // console.log(sampleData);
 
     /**
      * 날짜 이동 버튼 클릭 이벤트
