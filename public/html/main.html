@@ -22,6 +22,9 @@
             }
         }
     </script>
+    <script type="">
+
+    </script>
 </head>
 <body>
 <div class="flex flex-col items-center pt-[50px] pb-[70px]">
@@ -124,7 +127,64 @@
 
             </div>
 
-            <div id="inputOutput"></div>
+            <div>
+                <div class="min-w-[675px]">
+                    <h1 class="weight-600 text-[20px]"><span id="detailMonth">01</span>월 내역</h1>
+                    <div class="flex justify-between mt-4">
+                        <div class="flex flex-row gap-2">
+                            <!--                            <button id="totalBtn" class="bg-[rgb(47,82,255)] text-white hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"-->
+                            <!--                                    onclick="">전체</button>-->
+                            <button id="incomeBtn" class="bg-[rgb(47,82,255)] text-white hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
+                                    onclick="">수입</button>
+                            <button id="expendBtn" class="bg-[#EEEEEE] text-[#282828] hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
+                                    onclick="">지출</button>
+                        </div>
+                        <p id="detailCounts"
+                           class="text-[14px] weight-500 border-2 px-[12px] py-[4px] rounded-[8px] border-[#3D3D3D]">13건</p>
+                    </div>
+                </div>
+                <div id="detailContentsDiv">
+                    <div class="min-w-[675px]">
+                        <h1 class="text-base weight-500">2024.01.01</h1>
+                        <div class="flex justify-between mt-4">
+                            <ul class="flex flex-row">
+                                <li class="text-[14px] weight-600 border-2 px-[21px] py-[5px] rounded-[8px] text-[#D61F1F] border-[#D61F1F]">
+                                    식비
+                                </li>
+                                <li class="text-[14px] weight-600 px-[21px] py-[5px] text-center">
+                                    짜장면
+                                </li>
+                                <li class="text-[14px] weight-600 px-[21px] py-[5px] text-[#484848]">
+                                    카드
+                                </li>
+                            </ul>
+                            <div class="text-[14px] weight-600 px-[21px] py-[5px] text-[#D61F1F]">
+                                -9,000원
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between mt-4 w-full">
+                            <ul class="flex flex-row ">
+                                <li class="text-[14px] weight-600 border-2 px-[21px] py-[5px] rounded-[8px] text-[#506CFF] border-[#506CFF]">
+                                    용돈
+                                </li>
+                                <li class="text-[14px] weight-600 px-[21px] py-[5px] text-center">
+                                    월급여
+                                </li>
+                                <li class="text-[14px] weight-600 px-[21px] py-[5px] text-[#484848]">
+                                    카드
+                                </li>
+                            </ul>
+                            <div class="text-[14px] weight-600 px-[21px] py-[5px] text-[#506CFF]">
+                                +100,000원
+                            </div>
+                        </div>
+
+                        <div class="border-[#DBDBDB] border-t border-[1px] my-5"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
@@ -133,6 +193,7 @@
 </body>
 </html>
 
+
 <script>
     fetch('footer.html')
         .then(response => response.text())
@@ -140,13 +201,6 @@
             document.getElementById('footer').innerHTML = data;
         })
         .catch(error => console.error('Error loading footer:', error));
-
-    fetch('inputoutput.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('inputOutput').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading input-output:', error));
 
     const nightMode = document.getElementById('nightMode');
     const dayMode = document.getElementById('dayMode');
