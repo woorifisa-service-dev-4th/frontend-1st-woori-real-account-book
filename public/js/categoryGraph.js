@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const activeColor = 'bg-[#506CFF]';
     const activeTextColor = 'text-white';
 
-    let data;
+    let activeButton = document.getElementById('food'); // 기본 활성 버튼
+    let sampleData;
 
     // sampleData.json 데이터를 가져오기
     const getSampleData = async () => {
@@ -20,9 +21,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 현재 월의 데이터를 필터링
     function getCurrentMonthData(data) {
-        const now = new Date(); // 현재 날짜
+        const now = new Date();
         const currentYear = now.getFullYear();
-        const currentMonth = now.getMonth(); // 0부터 시작 (1월: 0, 2월: 1, ...)
+        const currentMonth = now.getMonth();
 
         return data.filter(item => {
             const itemDate = new Date(item.date);
@@ -51,10 +52,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!weeklySums[weekNumber]) {
                 weeklySums[weekNumber] = 0;
             }
-            weeklySums[weekNumber] += item.amount; // 주차별 금액 합산
+            weeklySums[weekNumber] += item.amount;
         });
 
-        return weeklySums; // 주차별 합계 반환
+        return weeklySums;
     }
 
     // UI 업데이트
@@ -64,10 +65,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         const weeklySums = calculateWeeklySums(filteredData);
 
         const weekContainers = document.querySelector('.flex-row.justify-center.gap-6');
-        weekContainers.innerHTML = ''; // 기존 내용을 비움
+        weekContainers.innerHTML = '';
 
-        const maxBarHeight = 130; // 최대 막대 높이
-        const maxAmount = Math.max(...Object.values(weeklySums), 0); // 최대 값 계산
+        const maxBarHeight = 130;
+        const maxAmount = Math.max(...Object.values(weeklySums), 0);
 
         for (let week = 1; week <= 5; week++) {
             const amount = weeklySums[week] || 0;
@@ -94,24 +95,44 @@ document.addEventListener('DOMContentLoaded', async () => {
             weekContainer.appendChild(bar);
             weekContainer.appendChild(weekText);
         }
+    }
 
+    // 버튼 상태 업데이트 함수
+    function updateButtonState(button) {
+        buttons.forEach(btn => {
+            btn.classList.remove(activeColor, activeTextColor);
+            btn.classList.add(defaultColor);
+        });
+        button.classList.remove(defaultColor);
+        button.classList.add(activeColor, activeTextColor);
     }
 
     // 버튼 클릭 이벤트 리스너
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            buttons.forEach(btn => {
-                btn.classList.remove(activeColor, activeTextColor);
-                btn.classList.add(defaultColor);
-            });
-            button.classList.remove(defaultColor);
-            button.classList.add(activeColor, activeTextColor);
+            activeButton = button; // 현재 활성 버튼 업데이트
+            updateButtonState(button);
 
-            const category = button.id; // 버튼의 id가 카테고리 이름
-            updateWeeklyDataDisplay(category); // UI 업데이트
+            const category = button.id;
+            updateWeeklyDataDisplay(category);
+        });
+
+        button.addEventListener('mouseenter', () => {
+            if (button !== activeButton) {
+                button.classList.remove(defaultColor);
+                button.classList.add(activeColor, activeTextColor);
+            }
+        });
+
+        button.addEventListener('mouseleave', () => {
+            if (button !== activeButton) {
+                button.classList.remove(activeColor, activeTextColor);
+                button.classList.add(defaultColor);
+            }
         });
     });
 
-    // 페이지 로드 시 기본 카테고리 표시
-    updateWeeklyDataDisplay('food'); // 기본값: 식비
+    // 페이지 로드 시 기본 카테고리 표시 및 활성화
+    updateWeeklyDataDisplay('food');
+    updateButtonState(activeButton);
 });
