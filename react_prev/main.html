@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- JSX를 사용하기 위해 필요한 의존성(Babel) 추가 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+<div id="root"></div>
+
+
+<script type="text/babel">
+    const { useState } = React;
+
+    /**
+     * 사용자 정보 컴포넌트
+     */
+    const UserInfo = () => {
+        const [name, setName] = useState('홍길동');
+
+        return (
+            <div className="flex flex-row items-center gap-2">
+                <img src="../public/images/user-profile-default.png" alt="user profile" className="w-[30px] h-[30px]"/>
+                <p className="weight-600">{name}</p>
+            </div>
+        );
+    }
+
+    /**
+     * 날짜 Provider
+     */
+    const DateProvider = () => {
+        const [selectDate, setSelectDate] = useState(new Date()); // new Date 형식: 2025-01-01
+
+        // 현재 날짜 조회 (ex. 2025.01)
+        const getNowDate = () => {
+            return selectDate.getFullYear() + '.' + (selectDate.getMonth() + 1).toString().padStart(2, '0');
+        }
+
+        // 이전 달로 이동
+        const movePrevDate = () => {
+            // 이동 가능 범위: 2024.08 ~ 2025.01
+            if (!(selectDate.getFullYear() === 2024 && selectDate.getMonth() === 7)) {
+                setSelectDate(new Date(selectDate.getFullYear(), selectDate.getMonth() - 1));
+            }
+        }
+
+        // 다음 달로 이동
+        const moveNextDate = () => {
+            // 이동 가능 범위: 2024.08 ~ 2025.01
+            if (!(selectDate.getFullYear() === 2025 && selectDate.getMonth() === 0)) {
+                setSelectDate(new Date(selectDate.getFullYear(), selectDate.getMonth() + 1));
+            }
+        }
+
+        return { getNowDate, movePrevDate, moveNextDate, selectDate };
+    };
+
+    /**
+     * 헤더 날짜 컴포넌트
+     * - 가능 범위: 2024.08 ~ 2025.01
+     */
+    const SelectedDate = () => {
+        const { getNowDate, movePrevDate, moveNextDate, selectDate } = DateProvider();
+        const selectedDate = getNowDate(); // 현재 날짜 조회
+
+        return (
+            <div className="absolute top-[60px] left-1/2 transform -translate-x-1/2 text-center">
+                <h1 className="dark-mode-light-gray text-[#3C3C3C] text-[16px] weight-600">
+                    우리 REAL 가계부
+                </h1>
+                <div className="flex flex-row items-center justify-center gap-2">
+                    <button className="p-2 cursor-pointer" onClick={movePrevDate}>
+                        <img id="prevDateBtn" src="../public/images/vector-left-gray-icon.png" alt="left icon" className="w-[22px]"/>
+                    </button>
+                    <p id="nowDate" className="weight-600 text-[36px]">
+                        {selectedDate}
+                    </p>
+                    <button className="p-2 cursor-pointer" onClick={moveNextDate}>
+                        <img id="nextDateBtn" src="../public/images/vector-right-gray-icon.png" alt="right icon" className="w-[22px]"/>
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    /**
+     * 밤 낮 모드 변경 컴포넌트
+     * - 밤 모드: nightMode 버튼 클릭 시, 밤 모드로 변경 (night-mode 클래스 toggle, nightMode hidden add, dayMode hidden remove)
+     * - 낮 모드: dayMode 버튼 클릭 시, 낮 모드로 변경 (night-mode 클래스 toggle, nightMode hidden remove, dayMode hidden add)
+     */
+    const NightDayMode = () => {
+        const [isNightMode, setIsNightMode] = useState(false);
+
+        return (
+            <>
+                <button className="px-2 py-1"
+                        onClick={() => { setIsNightMode(!isNightMode); }}>
+                    <img id="nightMode" className="w-[30px] h-[30px]" alt="night mode"
+                         src={isNightMode ? "../public/images/night-mode-btn.png" : "../public/images/day-mode-btn.png"}/>
+                </button>
+            </>
+        );
+    }
+
+    // 버튼 컴포넌트
+    const MoveButton = (props) => {
+        const {content, moveUrl} = props;
+
+        return (
+            <button
+                className="hover:bg-[#506CFF] hover:text-white rounded-[8px] border border-[#506CFF] text-[#506CFF] text-[14px] weight-600 px-[21px] py-[5px]"
+                onClick={() => {
+                    location.href = moveUrl;
+                }}>
+                {content}
+            </button>
+        );
+    }
+
+    /**
+     * 상단 헤더 컴포넌트
+     */
+    const Header = () => {
+        return (
+            <div className="flex flex-row justify-between w-full items-end h-[78px]">
+                <UserInfo/>
+                <SelectedDate/>
+
+                <div className="flex flex-col items-end h-full justify-between">
+                    <NightDayMode/>
+                    <div className="flex flex-row gap-2">
+                        <MoveButton content={"분석 보기"}
+                                    moveUrl={"category-analysis.html"}/>
+                        <MoveButton content={"내역 등록"}
+                                    moveUrl={"transaction-register.html"} />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    /**
+     * 총 수입/지출 컴포넌트
+     */
+    const TotalIncomeExpend = () => {
+
+        return (
+            <div className="flex flex-row w-full justify-between">
+                <div
+                    className="hover:bg-[#d9dfff] flex flex-col justify-between rounded-[16px] bg-[#E6EAFF] p-5 w-[327px] h-[180px]">
+                    <p className="black-text weight-600 text-[18px]"><span className="nowMonth">1</span>월 총 수입</p>
+
+                    <div className="flex flex-col">
+                        <p id="incomeChangeMessage"
+                           className="dark-gray-text text-[#5E5E5E] text-[14px] weight-500">12월보다 1,000,000원 늘었어요🥰</p>
+                        <p id="totalIncomeAmount" className="black-text weight-600 text-[26px]">0원</p>
+                    </div>
+                </div>
+
+                <div
+                    className="hover:bg-[#3959ff] flex flex-col justify-between rounded-[16px] bg-[#506CFF] p-5 w-[327px] h-[180px]">
+                    <p className="weight-600 text-[18px] text-white"><span className="nowMonth">1</span>월 총 지출</p>
+
+                    <div className="flex flex-col">
+                        <p id="expendChangeMessage"
+                           className="text-[#5E5E5E] text-[14px] text-[#DBDBDB] weight-500">12월보다 1,000,000원 더 썼어요😢</p>
+                        <p id="totalExpendAmount" className="weight-600 text-[26px] text-white">0원</p>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+
+    // ============================================
+
+
+    // 헤더 날짜 가져오기
+    // const DataContent = createContext();
+    // export const DateProvider = ({children}) => {
+    //     const [selectDate, setSelectDate] = useState(new Date(2025, 0, 1));
+    //
+    //     return (
+    //         <DateContext.Provider value={{selectDate, setSelectDate}}>
+    //             {children}
+    //         </DateContext.Provider>
+    //     );
+    // };
+
+    // export const useDate = () => useContext(DateContext);
+
+
+    // const Footer = () => {
+    //     return (
+    //         <div>
+    //             <FooterBtn/>
+    //             <FooterDetailContents/>
+    //         </div>
+    //     );
+    // }
+    //
+    // //하단 버튼 공통 컵포넌트
+    // const FooterBtn = () => {
+    //     return (
+    //         <div className="min-w-[675px]">
+    //             <FooterDetailMonth/>
+    //             <div className="flex justify-between mt-4">
+    //                 <div className="flex flex-row gap-2">
+    //                     // ButtonGroup
+    //                     // <button id="incomeBtn"
+    //                     //         className="bg-[rgb(47,82,255)] text-white hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
+    //                     //         onClick="">수입
+    //                     // </button>
+    //                     // <button id="expendBtn"
+    //                     //         className="bg-[#EEEEEE] text-[#282828] hover:bg-[rgb(47,82,255)] hover:text-white rounded-[8px]  text-[14px] weight-600 px-[21px] py-[5px]"
+    //                     //         onClick=""> 지출
+    //                     // </button>
+    //                 </div>
+    //                 <p id="detailCounts"
+    //                    className="text-[14px] weight-500 border-2 px-[12px] py-[4px] rounded-[8px] border-[#3D3D3D]">13건</p>
+    //             </div>
+    //         </div>
+    //     );
+    // }
+    //
+    // const FooterDetailMonth = () => {
+    //     return (
+    //         <h1 className="weight-600 text-[20px]"><span id="detailMonth">01</span>월 내역</h1>
+    //     );
+    // }
+    //
+    //
+    // const FooterDetailContents = () => {
+    //     return (
+    //             <div id="detailContentsDiv">
+    //             <div className="min-w-[675px]">
+    //                 <h1 className="text-base weight-500">2024.01.01</h1>
+    //                 <div className="flex justify-between mt-4">
+    //                     <ul className="flex flex-row">
+    //                          <li className="text-[14px] weight-600 border-2 px-[21px] py-[5px] rounded-[8px] text-[#D61F1F] border-[#D61F1F]">
+    //                             식비
+    //                         </li>
+    //                         <li className="text-[14px] weight-600 px-[21px] py-[5px] text-center">
+    //                             짜장면
+    //                         </li>
+    //                         <li className="text-[14px] weight-600 px-[21px] py-[5px] text-[#484848]">
+    //                             카드
+    //                         </li>
+    //                     </ul>
+    //                     <div className="text-[14px] weight-600 px-[21px] py-[5px] text-[#D61F1F]">
+    //                         -9,000원
+    //                     </div>
+    //                 </div>
+    //
+    //                 <div className="border-[#DBDBDB] border-t border-[1px] my-5"></div>
+    //             </div>
+    //         </div>
+    //
+    //     );
+    // }
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <div className="flex flex-col items-center pt-[50px] pb-[70px]">
+            <div className="min-w-[675px] min-h-content">
+                <div className="flex flex-col items-center gap-14 w-full">
+                    <Header/>
+                    <TotalIncomeExpend />
+
+                </div>
+            </div>
+        </div>
+    );
+</script>
+</body>
+
+</html>
